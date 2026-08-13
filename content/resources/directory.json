@@ -1,0 +1,144 @@
+{
+  "helplines": [
+    {
+      "id": "tele-manas",
+      "name": "Tele-MANAS",
+      "description": "National mental health support helpline, Government of India. Free, 24/7, multilingual.",
+      "phone": "14416",
+      "type": "helpline",
+      "national": true,
+      "languages": ["Hindi", "English", "Regional languages"],
+      "hours": "24/7",
+      "cost": "Free"
+    },
+    {
+      "id": "dementia-india-alliance",
+      "name": "Dementia India Alliance Helpline",
+      "description": "Dedicated support line for people with dementia and their caregivers across India.",
+      "phone": "8585 990 990",
+      "website": "https://www.dementiaindiaalliance.org",
+      "type": "helpline",
+      "national": true,
+      "cost": "Free"
+    },
+    {
+      "id": "icall",
+      "name": "iCall",
+      "description": "Psychosocial support helpline run by TISS (Tata Institute of Social Sciences). Offers counselling for emotional distress.",
+      "phone": "9152987821",
+      "website": "https://icallhelpline.org",
+      "type": "helpline",
+      "national": true,
+      "hours": "Monday–Saturday, 8am–10pm",
+      "cost": "Free"
+    }
+  ],
+  "organizations": [
+    {
+      "id": "ardsi-national",
+      "name": "ARDSI National",
+      "fullName": "Alzheimer's and Related Disorders Society of India",
+      "description": "The national voluntary organisation in India for Alzheimer's disease and related dementias. Founded in 1992. Provides support groups, caregiver training, public awareness, and advocacy.",
+      "city": "Cochin (National Office)",
+      "state": "Kerala",
+      "phone": "+91 484 2396 453",
+      "email": "ardsinationaloffice@gmail.com",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": true
+    },
+    {
+      "id": "ardsi-delhi",
+      "name": "ARDSI Delhi Chapter",
+      "fullName": "Alzheimer's and Related Disorders Society of India — Delhi Chapter",
+      "description": "Delhi chapter of ARDSI. Provides caregiver support groups and dementia awareness programmes in the Delhi NCR region.",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": false
+    },
+    {
+      "id": "ardsi-kolkata",
+      "name": "ARDSI Kolkata Chapter",
+      "fullName": "Alzheimer's and Related Disorders Society of India — Kolkata Chapter",
+      "description": "Kolkata chapter of ARDSI. Serves families in West Bengal with support groups and educational resources.",
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": false
+    },
+    {
+      "id": "ardsi-bangalore",
+      "name": "ARDSI Bangalore Chapter",
+      "fullName": "Alzheimer's and Related Disorders Society of India — Bangalore Chapter",
+      "description": "Bangalore chapter of ARDSI. Active caregiver support programme and awareness events.",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": false
+    },
+    {
+      "id": "ardsi-chennai",
+      "name": "ARDSI Chennai Chapter",
+      "fullName": "Alzheimer's and Related Disorders Society of India — Chennai Chapter",
+      "description": "Chennai chapter of ARDSI serving Tamil Nadu families.",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": false
+    },
+    {
+      "id": "ardsi-mumbai",
+      "name": "ARDSI Mumbai Chapter",
+      "fullName": "Alzheimer's and Related Disorders Society of India — Mumbai Chapter",
+      "description": "Mumbai chapter of ARDSI serving families in Maharashtra.",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": false
+    },
+    {
+      "id": "ardsi-hyderabad",
+      "name": "ARDSI Hyderabad Chapter",
+      "fullName": "Alzheimer's and Related Disorders Society of India — Hyderabad Chapter",
+      "description": "Hyderabad chapter of ARDSI serving families in Telangana and Andhra Pradesh.",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "website": "https://www.ardsi.org",
+      "type": "ngo",
+      "national": false
+    }
+  ],
+  "clinics": [
+    {
+      "id": "nimhans-bangalore",
+      "name": "NIMHANS Memory Clinic",
+      "fullName": "National Institute of Mental Health and Neurosciences — Department of Geriatric Psychiatry",
+      "description": "India's premier neuroscience institution. The Geriatric Psychiatry department provides comprehensive dementia assessment, diagnosis, and management.",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "address": "Hosur Road, Bangalore 560029",
+      "phone": "+91 80 4611 5555",
+      "website": "https://www.nimhans.ac.in",
+      "type": "hospital",
+      "national": false
+    },
+    {
+      "id": "aiims-delhi",
+      "name": "AIIMS Memory Clinic",
+      "fullName": "All India Institute of Medical Sciences — Department of Neurology / Geriatrics",
+      "description": "AIIMS Delhi's neurology and geriatrics departments see patients with memory and cognitive concerns. Referral typically through outpatient services.",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "address": "Sri Aurobindo Marg, Ansari Nagar, New Delhi 110029",
+      "website": "https://www.aiims.edu",
+      "type": "hospital",
+      "national": false
+    }
+  ]
+}

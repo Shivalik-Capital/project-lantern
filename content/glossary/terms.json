@@ -1,0 +1,155 @@
+[
+  {
+    "term": "Alzheimer's Disease",
+    "pronunciation": "ALTZ-hi-merz",
+    "definition": "The most common form of dementia, accounting for 60–70% of cases. Caused by the accumulation of amyloid plaques and tau tangles in the brain, leading to the progressive death of nerve cells. Typically begins with short-term memory loss and gradually affects all aspects of cognition and functioning.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "disease"
+  },
+  {
+    "term": "Amyloid Plaque",
+    "pronunciation": "AM-ih-loyd",
+    "definition": "Abnormal clumps of a protein fragment called beta-amyloid that accumulate between nerve cells in the brains of people with Alzheimer's disease. Amyloid plaques are one of the two hallmark physical changes of Alzheimer's (along with tau tangles).",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "science"
+  },
+  {
+    "term": "APOE-e4",
+    "pronunciation": "AY-poh-ee ee-four",
+    "definition": "A variant of the APOE gene that is associated with increased risk of developing Alzheimer's disease. Having one copy of APOE-e4 increases risk; having two copies increases it further. However, carrying APOE-e4 does not guarantee developing the disease, and many people with Alzheimer's do not carry it.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "science"
+  },
+  {
+    "term": "ARDSI",
+    "pronunciation": "AH-r-dee-es-eye",
+    "definition": "Alzheimer's and Related Disorders Society of India. The national voluntary organisation in India dedicated to Alzheimer's disease and other dementias. Founded in 1992, ARDSI has chapters in multiple cities and provides support groups, caregiver training, and advocacy for people with dementia and their families.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "general"
+  },
+  {
+    "term": "Caregiver Burden",
+    "definition": "The physical, emotional, social, and financial strain experienced by a person providing unpaid care for someone with a chronic illness or disability. Caregiver burden in dementia is particularly significant because of the long duration of the illness, the progressive nature of care demands, and the emotional complexity of watching a family member's identity change.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "caregiving"
+  },
+  {
+    "term": "Cognitive Decline",
+    "definition": "A measurable decrease in one or more areas of thinking ability, including memory, attention, language, executive function, or visuospatial skills. Some cognitive decline is a normal part of ageing; significant or accelerating cognitive decline that affects daily functioning may indicate a neurological condition.",
+    "relatedArticles": ["what-is-alzheimers", "types-of-dementia"],
+    "category": "symptoms"
+  },
+  {
+    "term": "Dementia",
+    "definition": "An umbrella term for a group of symptoms — including memory loss, difficulties with thinking, problem-solving, and language — that are severe enough to interfere with daily life. Dementia is caused by diseases that damage brain cells. Alzheimer's disease is the most common cause, but there are many other types. Dementia is not a normal part of ageing.",
+    "relatedArticles": ["what-is-alzheimers", "types-of-dementia"],
+    "category": "disease"
+  },
+  {
+    "term": "Executive Function",
+    "definition": "A set of mental skills that help people plan, focus, remember instructions, and manage multiple tasks simultaneously. Executive function includes working memory, mental flexibility, and self-control. Difficulties with executive function — such as making decisions, organising activities, or managing finances — are a prominent early symptom in some types of dementia, particularly vascular and frontotemporal dementia.",
+    "relatedArticles": ["types-of-dementia"],
+    "category": "symptoms"
+  },
+  {
+    "term": "Frontotemporal Dementia (FTD)",
+    "definition": "A group of brain disorders caused by progressive damage to the frontal and temporal lobes. FTD is the most common dementia in people under 65. The behavioural variant of FTD typically presents with personality changes, disinhibition, and loss of empathy before memory is significantly affected. Primary Progressive Aphasia is another form of FTD that primarily affects language.",
+    "relatedArticles": ["types-of-dementia"],
+    "category": "disease"
+  },
+  {
+    "term": "Hippocampus",
+    "pronunciation": "hip-oh-CAM-pus",
+    "definition": "A region of the brain that plays a critical role in forming new memories and spatial navigation. The hippocampus is one of the first areas of the brain to be damaged in Alzheimer's disease, which is why the earliest symptoms typically involve short-term memory — difficulty forming new memories, rather than recalling very old ones.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "science"
+  },
+  {
+    "term": "Lewy Body Dementia",
+    "pronunciation": "LOO-ee",
+    "definition": "An umbrella term for two related conditions — Dementia with Lewy Bodies (DLB) and Parkinson's Disease Dementia — both involving abnormal protein deposits (Lewy bodies) in brain cells. Distinctive features include vivid visual hallucinations, fluctuating alertness, Parkinsonian movement symptoms, and severe sensitivity to certain antipsychotic medications.",
+    "relatedArticles": ["types-of-dementia"],
+    "category": "disease"
+  },
+  {
+    "term": "MCI (Mild Cognitive Impairment)",
+    "definition": "A stage of cognitive decline that is greater than normal ageing but less severe than dementia. People with MCI have noticeable memory or thinking problems but are still able to manage daily activities independently. MCI does not always progress to dementia; some people remain stable or improve. MCI is sometimes an early sign of Alzheimer's disease.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "symptoms"
+  },
+  {
+    "term": "Neurodegeneration",
+    "pronunciation": "noo-roh-dee-jen-er-AY-shun",
+    "definition": "The progressive loss of structure and function of neurons (nerve cells) in the brain. Neurodegenerative diseases, including Alzheimer's disease, Parkinson's disease, and Lewy body dementia, are caused by this gradual breakdown of brain cells. Currently, neurodegeneration in these conditions cannot be reversed, though research into treatments is ongoing.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "science"
+  },
+  {
+    "term": "NIMHANS",
+    "definition": "National Institute of Mental Health and Neurosciences. Located in Bangalore, NIMHANS is India's premier institution for mental health and neuroscience research and treatment. It has a dedicated department for geriatric psychiatry and is one of the leading centres for dementia assessment and research in India.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "general"
+  },
+  {
+    "term": "Respite Care",
+    "definition": "Temporary care provided for a person with dementia by someone other than the primary caregiver, allowing the caregiver a period of rest and recovery. Respite care may be provided at home, in a day care centre, or through a short-term residential stay. Access to regular respite is considered essential for sustainable long-term caregiving.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "caregiving"
+  },
+  {
+    "term": "Sundowning",
+    "definition": "A pattern of increased confusion, agitation, or restlessness that occurs in the late afternoon or evening in some people with dementia. The cause is not fully understood but may relate to changes in the brain's internal clock, fatigue, or changes in lighting. Sundowning is most common in the middle stages of Alzheimer's disease and can be one of the more challenging behaviours for caregivers to manage.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "symptoms"
+  },
+  {
+    "term": "Tau Tangles",
+    "pronunciation": "TAW",
+    "definition": "Twisted strands of tau protein that accumulate inside dying nerve cells in the brains of people with Alzheimer's disease. Along with amyloid plaques, tau tangles are one of the two hallmark physical changes of Alzheimer's. Tau normally helps stabilise the internal structure of neurons; in Alzheimer's, it becomes abnormal and disrupts this function.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "science"
+  },
+  {
+    "term": "Vascular Dementia",
+    "definition": "The second most common form of dementia, caused by reduced blood flow to the brain due to strokes, mini-strokes, or small vessel disease. Vascular dementia may appear suddenly after a stroke or progress in a stepwise fashion. It often affects executive function, decision-making, and processing speed more prominently than memory in early stages. Cardiovascular risk factor management (blood pressure, diabetes, cholesterol) is particularly important.",
+    "relatedArticles": ["types-of-dementia"],
+    "category": "disease"
+  },
+  {
+    "term": "Wandering",
+    "definition": "Walking or moving about without a clear purpose or destination, which can result in the person becoming lost or in danger. Wandering is common in the middle and late stages of dementia and is one of the most safety-critical behaviours caregivers need to plan for. Strategies include safe indoor environments, door alarms, ID bracelets, and GPS tracking devices.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "symptoms"
+  },
+  {
+    "term": "Working Memory",
+    "definition": "The ability to temporarily hold and manipulate information in the mind — for example, remembering a phone number long enough to dial it, or following multi-step instructions. Working memory is part of executive function and is often affected early in dementia, contributing to difficulties with tasks that require holding multiple pieces of information simultaneously.",
+    "relatedArticles": ["what-is-alzheimers"],
+    "category": "symptoms"
+  },
+  {
+    "term": "Power of Attorney",
+    "definition": "A legal document authorising one person (the agent or attorney-in-fact) to make decisions on behalf of another (the principal). In the context of dementia care in India, arranging a Power of Attorney while the person diagnosed still has legal capacity is one of the most important early practical steps. It allows a family member to manage financial and legal affairs when the person can no longer do so independently.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "caregiving"
+  },
+  {
+    "term": "Geriatrician",
+    "pronunciation": "jeh-ree-AH-tri-shun",
+    "definition": "A medical doctor who specialises in the care of older adults, typically those over 65. Geriatricians are trained to manage the complex, multi-system health needs of older patients, including dementia diagnosis and management. In India, geriatricians are available at major hospitals and medical colleges, though the specialty is less widely distributed than general medicine.",
+    "relatedArticles": ["what-is-alzheimers", "after-diagnosis"],
+    "category": "general"
+  },
+  {
+    "term": "Antipsychotic Medications",
+    "definition": "A class of medications sometimes prescribed to manage severe behavioural symptoms in dementia, such as agitation, aggression, or psychosis. Their use in dementia requires careful medical supervision. Antipsychotic medications carry significant risks in elderly people with dementia, including increased risk of stroke and death. People with Lewy body dementia are particularly sensitive to antipsychotics and may have severe adverse reactions.",
+    "relatedArticles": ["types-of-dementia"],
+    "category": "treatment"
+  },
+  {
+    "term": "Palliative Care",
+    "definition": "An approach to care that focuses on improving the quality of life for people with serious illness and their families, through the prevention and relief of suffering — physical, psychological, social, and spiritual. In late-stage dementia, palliative care focuses on comfort, dignity, pain management, and support for the family. Palliative care can be provided alongside curative or disease-modifying treatments, not only at end of life.",
+    "relatedArticles": ["after-diagnosis"],
+    "category": "treatment"
+  }
+]
