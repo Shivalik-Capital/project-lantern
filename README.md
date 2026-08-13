@@ -1,5 +1,8 @@
 # Project Lantern
 
+[![Deploy with Vercel](https://vercel.com/button)](https://project-lantern-teal.vercel.app)
+**Live Demo:** [https://project-lantern-teal.vercel.app](https://project-lantern-teal.vercel.app)
+
 Project Lantern is an open-source educational platform dedicated to providing clear, culturally relevant, and medically sound information about Alzheimer's disease and dementia for Indian families.
 
 ## Purpose
