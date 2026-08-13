@@ -3,15 +3,9 @@
 import Link from 'next/link'
 import { ArrowRight, BookOpen, Heart, Users, MapPin, BarChart3, ShieldX } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
+import { IndiaMap } from 'india-map-react'
 
-const PREVALENCE_DATA = [
-  { state: 'Jammu & Kashmir', prevalence: 12.94 },
-  { state: 'Odisha', prevalence: 10.74 },
-  { state: 'Andhra Pradesh', prevalence: 10.37 },
-  { state: 'National Average', prevalence: 7.4 },
-  { state: 'Chandigarh', prevalence: 1.82 },
-]
+
 
 const FADE_UP = {
   hidden: { opacity: 0, y: 30 },
@@ -95,21 +89,34 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            <motion.div variants={FADE_UP} className="card p-6 md:p-8 bg-surface border-border shadow-card h-[400px] flex flex-col">
-              <h3 className="font-sans font-700 text-lg text-text mb-6">Dementia Prevalence by State (%)</h3>
-              <div className="flex-1 w-full min-h-0">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={PREVALENCE_DATA} layout="vertical" margin={{ top: 0, right: 30, left: 40, bottom: 0 }}>
-                    <XAxis type="number" domain={[0, 15]} hide />
-                    <YAxis dataKey="state" type="category" axisLine={false} tickLine={false} tick={{ fill: '#5a6070', fontSize: 13, fontWeight: 600 }} />
-                    <Tooltip cursor={{ fill: '#f2f7f5' }} contentStyle={{ borderRadius: '10px', border: 'none', boxShadow: '0 4px 20px 0 rgb(74 124 111 / 0.14)' }} />
-                    <Bar dataKey="prevalence" radius={[0, 4, 4, 0]} barSize={24}>
-                      {PREVALENCE_DATA.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.state === 'National Average' ? '#c4793a' : '#4a7c6f'} />
-                      ))}
-                    </Bar>
-                  </BarChart>
-                </ResponsiveContainer>
+            <motion.div variants={FADE_UP} className="card p-6 md:p-8 bg-surface border-border shadow-card h-[500px] flex flex-col items-center justify-center relative overflow-hidden">
+              <h3 className="font-sans font-700 text-lg text-text mb-2 self-start absolute top-6 left-6 z-10 bg-surface/80 px-2 py-1 rounded backdrop-blur-sm">Dementia Prevalence by State (%)</h3>
+              <div className="w-full h-full flex items-center justify-center pt-8">
+                <IndiaMap
+                  stateData={{
+                    "Jammu & Kashmir": { value: 12.94 },
+                    "Odisha": { value: 10.74 },
+                    "Andhra Pradesh": { value: 10.37 },
+                    "Kerala": { value: 9.2 },
+                    "Maharashtra": { value: 7.4 },
+                    "Delhi": { value: 6.5 },
+                    "Chandigarh": { value: 1.82 },
+                  }}
+                  enableChoropleth={true}
+                  choroplethLow="#e8f0ed"
+                  choroplethHigh="#3a6358"
+                  showTooltip={true}
+                  strokeColor="#ffffff"
+                  strokeWidth={0.8}
+                  tooltipContent={(name: string, data: any) => (
+                    <div className="bg-surface border border-border shadow-lg px-4 py-2 rounded-lg text-sm">
+                      <span className="font-700 text-text block mb-1">{name}</span>
+                      <span className="text-text-muted">
+                        Prevalence: <strong className="text-primary">{data?.value ? `${data.value}%` : 'No data'}</strong>
+                      </span>
+                    </div>
+                  )}
+                />
               </div>
             </motion.div>
           </div>

@@ -20,15 +20,6 @@ const UNDERSTAND_ARTICLES = [
     tags: ['Basics', 'Diagnosis'],
     status: 'draft' as const,
   },
-  {
-    slug: 'types-of-dementia',
-    title: 'Understanding the Different Types of Dementia',
-    description:
-      "Dementia is not one disease. This guide explains the main types: Alzheimer's, vascular, Lewy body and frontotemporal dementia: their differences and why the distinction matters.",
-    readingTime: 7,
-    tags: ['Education', 'Types'],
-    status: 'draft' as const,
-  },
 ]
 
 export default function UnderstandPage() {

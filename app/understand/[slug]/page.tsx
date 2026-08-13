@@ -19,12 +19,9 @@ const FLAGSHIP_ARTICLE = {
     { name: 'World Health Organization: Dementia Fact Sheet', url: 'https://www.who.int/news-room/fact-sheets/detail/dementia' }
   ],
   body: `
-    <div class="p-6 bg-primary-lighter border border-primary-light rounded-xl mb-10 flex gap-4">
-      <ShieldAlert class="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-      <div>
-        <p class="font-700 text-primary-dark mb-1">Notice to Clinical Reviewers</p>
-        <p class="text-sm text-text-muted mb-0">This flagship article serves as a structural proof-of-concept for our MDX content pipeline. We invite your clinical scrutiny on the depth, tone and accuracy of the medical information presented below.</p>
-      </div>
+    <div style="padding: 1.5rem; background-color: var(--color-primary-lighter); border: 1px solid var(--color-primary-light); border-radius: 0.75rem; margin-bottom: 2.5rem;">
+      <p style="font-weight: 700; color: var(--color-primary-dark); margin-top: 0; margin-bottom: 0.25rem;">Notice to Clinical Reviewers</p>
+      <p style="font-size: 0.875rem; color: var(--color-text-muted); margin: 0;">This flagship article serves as a structural proof-of-concept for our MDX content pipeline. We invite your clinical scrutiny on the depth, tone and accuracy of the medical information presented below.</p>
     </div>
 
     <h2>Defining Alzheimer's Disease</h2>
