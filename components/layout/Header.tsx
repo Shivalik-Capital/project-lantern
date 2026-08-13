@@ -14,17 +14,17 @@ export function Header() {
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/understand" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <BookOpen className="w-4 h-4" /> Understand
+          <Link href="/charter" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <BookOpen className="w-4 h-4" /> Editorial Charter
           </Link>
-          <Link href="/caregiving" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Heart className="w-4 h-4" /> Caregiving
+          <Link href="/clinical-board" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <Users className="w-4 h-4" /> Clinical Board
+          </Link>
+          <Link href="/understand" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <Heart className="w-4 h-4" /> Draft Articles
           </Link>
           <Link href="/find-help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <MapPin className="w-4 h-4" /> Find Help
-          </Link>
-          <Link href="/glossary" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Users className="w-4 h-4" /> Glossary
+            <MapPin className="w-4 h-4" /> Resources
           </Link>
         </nav>
         <div className="md:hidden flex items-center">
