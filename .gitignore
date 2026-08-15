@@ -41,3 +41,14 @@ yarn-error.log*
 next-env.d.ts
 
 /lib/generated/prisma
+
+# Velite build output
+.velite
+
+# AI Agent config files
+.agents
+.claude
+.windsurf
+AGENTS.md
+CLAUDE.md
+skills-lock.json
