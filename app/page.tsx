@@ -155,23 +155,63 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-24 bg-surface text-center">
+      {/* Medical Glossary Section */}
+      <section className="py-20 bg-primary-lighter/30 border-t border-border-light" aria-labelledby="glossary-heading">
         <div className="container-layout">
-          <h2 className="text-3xl md:text-4xl font-sans font-800 text-text mb-6">
-            Help us build the clinical protocols.
+          <div className="max-w-4xl mx-auto card p-8 md:p-12 bg-surface shadow-card border-primary/20 flex flex-col md:flex-row gap-8 items-center text-center md:text-left">
+            <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+              <BookOpen className="w-10 h-10 text-white" />
+            </div>
+            <div>
+              <h2 id="glossary-heading" className="text-2xl md:text-3xl font-sans font-800 text-text mb-4">
+                The Medical Glossary
+              </h2>
+              <p className="text-lg text-text-muted leading-relaxed mb-6">
+                Medical jargon can be overwhelming. We've built a plain-language glossary explaining common dementia terms, from "Aphasia" to "Sundowning," in simple words for families.
+              </p>
+              <Link href="/glossary" className="btn btn-amber inline-flex">
+                Browse the Glossary
+                <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-24 bg-surface border-t border-border-light text-center">
+        <div className="container-layout max-w-4xl">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-800 text-text mb-8">
+            Next Steps
           </h2>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto mb-10">
-            The infrastructure is ready. We are now assembling a Medical Advisory Board of leading neurologists and geriatricians to review and author our educational content.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <Link href="/clinical-board" className="btn btn-primary w-full sm:w-auto text-base px-8 py-4 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
-              Join the Clinical Board
-              <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
-            </Link>
-            <Link href="/understand" className="btn btn-outline w-full sm:w-auto text-base px-8 py-4 bg-surface">
-              Read the Pilot Articles
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="card p-8 bg-primary-lighter/50 border-primary/20 flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-sans font-700 text-text mb-3">For Doctors</h3>
+              <p className="text-text-muted mb-8 flex-1">
+                Help us review and author our educational content. Join the Medical Advisory Board.
+              </p>
+              <Link href="/clinical-board" className="btn btn-primary w-full text-base py-4 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
+                Join the Clinical Board
+                <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
+              </Link>
+            </div>
+
+            <div className="card p-8 bg-surface border-border flex flex-col items-center justify-center text-center">
+              <div className="w-12 h-12 rounded-full bg-border-light flex items-center justify-center mb-6">
+                <BookOpen className="w-6 h-6 text-text-muted" />
+              </div>
+              <h3 className="text-xl font-sans font-700 text-text mb-3">For Families</h3>
+              <p className="text-text-muted mb-8 flex-1">
+                Read our foundational articles on understanding Alzheimer's and its progression.
+              </p>
+              <Link href="/understand" className="btn btn-outline w-full text-base py-4">
+                Read the Pilot Articles
+                <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
