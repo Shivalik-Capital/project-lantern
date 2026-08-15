@@ -7,7 +7,7 @@ const articles = {
     title: s.string().max(120),
     description: s.string().max(300),
     section: s.enum(['understand', 'caregiving', 'diagnosed']),
-    slug: s.path(),
+    slug: s.path().transform((p) => p.replace(/^articles\//, '')),
     status: s.enum(['draft', 'reviewed']).default('draft'),
     author: s.string().optional(),
     medicalReviewer: s.string().optional(),

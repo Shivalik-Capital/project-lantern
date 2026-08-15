@@ -24,6 +24,9 @@ export function Header() {
           <Link href="/charter" aria-label="Read our Editorial Charter" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <BookOpen className="w-4 h-4" aria-hidden="true" /> Editorial Charter
           </Link>
+          <Link href="/glossary" aria-label="Medical Glossary" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <BookOpen className="w-4 h-4" aria-hidden="true" /> Glossary
+          </Link>
           <Link href="/methodology" aria-label="View our Methodology and Data Sourcing" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <BookOpen className="w-4 h-4" aria-hidden="true" /> Methodology
           </Link>

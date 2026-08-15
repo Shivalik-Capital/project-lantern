@@ -154,6 +154,27 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
+
+      {/* Bottom CTA */}
+      <section className="py-24 bg-surface text-center">
+        <div className="container-layout">
+          <h2 className="text-3xl md:text-4xl font-sans font-800 text-text mb-6">
+            Help us build the clinical protocols.
+          </h2>
+          <p className="text-lg text-text-muted max-w-2xl mx-auto mb-10">
+            The infrastructure is ready. We are now assembling a Medical Advisory Board of leading neurologists and geriatricians to review and author our educational content.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <Link href="/clinical-board" className="btn btn-primary w-full sm:w-auto text-base px-8 py-4 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
+              Join the Clinical Board
+              <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
+            </Link>
+            <Link href="/understand" className="btn btn-outline w-full sm:w-auto text-base px-8 py-4 bg-surface">
+              Read the Pilot Articles
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

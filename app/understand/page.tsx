@@ -9,18 +9,10 @@ export const metadata: Metadata = {
     "Clear, accurate educational articles about Alzheimer's disease and dementia: what it is, how it progresses and the different types. Written for Indian families.",
 }
 
-// Static data until Velite is wired up fully
-const UNDERSTAND_ARTICLES = [
-  {
-    slug: 'what-is-alzheimers',
-    title: "What is Alzheimer's Disease?",
-    description:
-      "A clear, plain-language introduction to Alzheimer's disease: what it is, how it differs from normal ageing and why an early understanding matters for Indian families.",
-    readingTime: 8,
-    tags: ['Basics', 'Diagnosis'],
-    status: 'draft' as const,
-  },
-]
+import { articles } from '@/.velite'
+
+// Filter articles to only show those in the 'understand' section
+const UNDERSTAND_ARTICLES = articles.filter(article => article.section === 'understand')
 
 export default function UnderstandPage() {
   return (
