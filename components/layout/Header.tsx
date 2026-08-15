@@ -13,22 +13,27 @@ export function Header() {
             Project Lantern
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
-          <Link href="/charter" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <BookOpen className="w-4 h-4" /> Editorial Charter
+        <nav className="hidden md:flex items-center gap-6" aria-label="Main Navigation">
+          <Link href="/charter" aria-label="Read our Editorial Charter" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <BookOpen className="w-4 h-4" aria-hidden="true" /> Editorial Charter
           </Link>
-          <Link href="/clinical-board" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Users className="w-4 h-4" /> Clinical Board
+          <Link href="/methodology" aria-label="View our Methodology and Data Sourcing" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <BookOpen className="w-4 h-4" aria-hidden="true" /> Methodology
           </Link>
-          <Link href="/understand" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Heart className="w-4 h-4" /> Draft Articles
+          <Link href="/clinical-board" aria-label="Learn about our Clinical Board" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <Users className="w-4 h-4" aria-hidden="true" /> Clinical Board
           </Link>
-          <Link href="/find-help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <MapPin className="w-4 h-4" /> Resources
+          <Link href="/understand" aria-label="Read Draft Articles" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <Heart className="w-4 h-4" aria-hidden="true" /> Draft Articles
+          </Link>
+          <Link href="/find-help" aria-label="Find Resources and Help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <MapPin className="w-4 h-4" aria-hidden="true" /> Resources
           </Link>
         </nav>
         <div className="md:hidden flex items-center">
-          {/* Mobile menu button could go here */}
+          <button aria-label="Open mobile menu" className="p-2 text-text-muted hover:text-primary">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+          </button>
         </div>
       </div>
     </header>
