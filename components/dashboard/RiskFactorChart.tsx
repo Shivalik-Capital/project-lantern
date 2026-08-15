@@ -17,28 +17,14 @@ export function RiskFactorChart() {
   const [source, setSource] = useState('IHME GBD 2023')
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/v1/risk-factors')
-      .then(res => res.json())
-      .then(d => {
-        setData([
-          { factor: 'Hypertension', impact: d.hypertension_impact * 100 },
-          { factor: 'Diabetes', impact: d.diabetes_impact * 100 },
-          { factor: 'Obesity', impact: d.obesity_impact * 100 },
-          { factor: 'Smoking', impact: d.smoking_impact * 100 },
-        ])
-        if (d.source) setSource(d.source)
-        setLoading(false)
-      })
-      .catch(err => {
-        console.error("Failed to fetch risk factors", err)
-        setData([
-          { factor: 'Hypertension', impact: 42 },
-          { factor: 'Diabetes', impact: 35 },
-          { factor: 'Obesity', impact: 22 },
-          { factor: 'Smoking', impact: 18 },
-        ])
-        setLoading(false)
-      })
+    // Using static data for V1
+    setData([
+      { factor: 'Hypertension', impact: 42 },
+      { factor: 'Diabetes', impact: 35 },
+      { factor: 'Obesity', impact: 22 },
+      { factor: 'Smoking', impact: 18 },
+    ])
+    setLoading(false)
   }, [])
 
   if (loading) return <div className="h-80 flex items-center justify-center text-text-muted">Loading chart data...</div>

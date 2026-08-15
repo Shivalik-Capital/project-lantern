@@ -15,24 +15,14 @@ export function NationalTrendChart() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // In production, this would hit the deployed FastAPI url
-    fetch('http://127.0.0.1:8000/api/v1/national-trends')
-      .then(res => res.json())
-      .then(d => {
-        setData(d)
-        setLoading(false)
-      })
-      .catch(err => {
-        console.error("Failed to fetch trends", err)
-        // Fallback mock data if API is down
-        setData([
-          { year: 1990, burden_index: 2.4, population_over_60_million: 56 },
-          { year: 2000, burden_index: 3.1, population_over_60_million: 71 },
-          { year: 2010, burden_index: 4.5, population_over_60_million: 92 },
-          { year: 2021, burden_index: 7.2, population_over_60_million: 138 },
-        ])
-        setLoading(false)
-      })
+    // Using static data for V1
+    setData([
+      { year: 1990, burden_index: 2.4, population_over_60_million: 56 },
+      { year: 2000, burden_index: 3.1, population_over_60_million: 71 },
+      { year: 2010, burden_index: 4.5, population_over_60_million: 92 },
+      { year: 2021, burden_index: 7.2, population_over_60_million: 138 },
+    ])
+    setLoading(false)
   }, [])
 
   if (loading) return <div className="h-80 flex items-center justify-center text-text-muted">Loading chart data...</div>
