@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run velite && next build",
+    "build": "npm run velite && next build && npx pagefind --site .next/server/app",
     "start": "next start",
     "lint": "next lint",
     "velite": "velite build"

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ardsi-delhi",
+    "name": "ARDSI Delhi Chapter",
+    "category": "Memory Clinic & NGO",
+    "description": "Provides day care, memory screening, and caregiver support groups in the NCR region.",
+    "phone": "+91 11 2680 4399",
+    "website": "http://ardsidelhi.org/",
+    "location": "New Delhi, India"
+  },
+  {
+    "id": "dia-national",
+    "name": "Dementia India Alliance (DIA)",
+    "category": "National NGO",
+    "description": "A national organization focused on making India dementia-friendly through advocacy and support networks.",
+    "phone": "1800 202 4944 (Helpline)",
+    "website": "https://dementiaindia.org/",
+    "location": "Pan-India"
+  },
+  {
+    "id": "nimhans-bangalore",
+    "name": "NIMHANS Geriatric Clinic",
+    "category": "Hospital / Memory Clinic",
+    "description": "Premier national institute offering specialized geriatric psychiatry and neurology evaluations.",
+    "phone": "+91 80 2699 5000",
+    "website": "https://nimhans.ac.in/",
+    "location": "Bengaluru, Karnataka"
+  },
+  {
+    "id": "scarf-chennai",
+    "name": "SCARF - DEMCARES",
+    "category": "NGO & Research Center",
+    "description": "Dementia Care in SCARF offers clinical assessment, psychological interventions, and caregiver training.",
+    "phone": "+91 44 2615 1073",
+    "website": "https://www.scarfindia.org/",
+    "location": "Chennai, Tamil Nadu"
+  },
+  {
+    "id": "ardsi-kerala",
+    "name": "ARDSI Kerala (National Office)",
+    "category": "NGO HQ",
+    "description": "The national headquarters providing residential care, day care, and extensive caregiver training.",
+    "phone": "+91 484 2808088",
+    "website": "http://ardsi.org/",
+    "location": "Kochi, Kerala"
+  }
+]
