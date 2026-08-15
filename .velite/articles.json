@@ -1,9 +1,169 @@
 [
   {
+    "title": "Recognizing and Preventing Caregiver Burnout",
+    "description": "Caring for someone with dementia takes a massive toll. Learn the signs of burnout and how to find respite care.",
+    "section": "caregiving",
+    "slug": "articles/caregiver-burnout",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "mental-health",
+      "burnout",
+      "respite"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const r={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(r.h1,{children:\"Recognizing and Preventing Caregiver Burnout\"}),\"\\n\",n(r.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores caring for someone with dementia takes a massive toll. learn the signs of burnout and how to find respite care.\"}),\"\\n\",n(r.h2,{children:\"Introduction\"}),\"\\n\",n(r.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(r.blockquote,{children:[\"\\n\",i(r.p,{children:[\"[!NOTE]\\n\",n(r.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(r.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(r.ol,{children:[\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(r.h3,{children:\"Practical Steps\"}),\"\\n\",n(r.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(r.pre,{children:n(r.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(r.h2,{children:\"Conclusion\"}),\"\\n\",n(r.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "Effective Communication Strategies for Caregivers",
+    "description": "Practical tips on how to talk and listen to a loved one living with dementia without causing frustration.",
+    "section": "caregiving",
+    "slug": "articles/communicating-with-dementia",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "communication",
+      "behavior",
+      "daily-care"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(t){const o={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...t.components};return i(e,{children:[n(o.h1,{children:\"Effective Communication Strategies for Caregivers\"}),\"\\n\",n(o.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores practical tips on how to talk and listen to a loved one living with dementia without causing frustration.\"}),\"\\n\",n(o.h2,{children:\"Introduction\"}),\"\\n\",n(o.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(o.blockquote,{children:[\"\\n\",i(o.p,{children:[\"[!NOTE]\\n\",n(o.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(o.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(o.ol,{children:[\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(o.h3,{children:\"Practical Steps\"}),\"\\n\",n(o.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(o.pre,{children:n(o.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(o.h2,{children:\"Conclusion\"}),\"\\n\",n(o.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "Creating a Dementia-Safe Home Environment",
+    "description": "A checklist for modifying your home in India to prevent falls, wandering, and confusion.",
+    "section": "caregiving",
+    "slug": "articles/creating-a-safe-home",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "home-safety",
+      "modifications",
+      "wandering"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const r={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(r.h1,{children:\"Creating a Dementia-Safe Home Environment\"}),\"\\n\",n(r.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores a checklist for modifying your home in india to prevent falls, wandering, and confusion.\"}),\"\\n\",n(r.h2,{children:\"Introduction\"}),\"\\n\",n(r.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(r.blockquote,{children:[\"\\n\",i(r.p,{children:[\"[!NOTE]\\n\",n(r.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(r.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(r.ol,{children:[\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(r.h3,{children:\"Practical Steps\"}),\"\\n\",n(r.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(r.pre,{children:n(r.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(r.h2,{children:\"Conclusion\"}),\"\\n\",n(r.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "10 Early Signs of Alzheimer's Disease",
+    "description": "Learn to recognize the early warning signs of Alzheimer's disease to seek timely medical intervention.",
+    "section": "understand",
+    "slug": "articles/early-signs-of-alzheimers",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "symptoms",
+      "early-stage",
+      "warning-signs"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const r={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(r.h1,{children:\"10 Early Signs of Alzheimer's Disease\"}),\"\\n\",n(r.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores learn to recognize the early warning signs of alzheimer's disease to seek timely medical intervention.\"}),\"\\n\",n(r.h2,{children:\"Introduction\"}),\"\\n\",n(r.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(r.blockquote,{children:[\"\\n\",i(r.p,{children:[\"[!NOTE]\\n\",n(r.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(r.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(r.ol,{children:[\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(r.li,{children:[n(r.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(r.h3,{children:\"Practical Steps\"}),\"\\n\",n(r.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(r.pre,{children:n(r.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(r.h2,{children:\"Conclusion\"}),\"\\n\",n(r.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "Navigating Dementia Diagnosis in India",
+    "description": "Step-by-step guidance on which specialists to see (neurologists, geriatricians) and what tests are typically involved in India.",
+    "section": "diagnosed",
+    "slug": "articles/getting-a-diagnosis-in-india",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "diagnosis",
+      "healthcare-system",
+      "specialists"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(t){const o={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...t.components};return i(e,{children:[n(o.h1,{children:\"Navigating Dementia Diagnosis in India\"}),\"\\n\",n(o.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores step-by-step guidance on which specialists to see (neurologists, geriatricians) and what tests are typically involved in india.\"}),\"\\n\",n(o.h2,{children:\"Introduction\"}),\"\\n\",n(o.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(o.blockquote,{children:[\"\\n\",i(o.p,{children:[\"[!NOTE]\\n\",n(o.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(o.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(o.ol,{children:[\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(o.h3,{children:\"Practical Steps\"}),\"\\n\",n(o.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(o.pre,{children:n(o.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(o.h2,{children:\"Conclusion\"}),\"\\n\",n(o.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "The Stages of Alzheimer's: How the Disease Progresses",
+    "description": "An overview of the mild, moderate, and severe stages of Alzheimer's and what changes to expect.",
+    "section": "understand",
+    "slug": "articles/how-alzheimers-progresses",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "progression",
+      "stages",
+      "what-to-expect"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const t={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(t.h1,{children:\"The Stages of Alzheimer's: How the Disease Progresses\"}),\"\\n\",n(t.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores an overview of the mild, moderate, and severe stages of alzheimer's and what changes to expect.\"}),\"\\n\",n(t.h2,{children:\"Introduction\"}),\"\\n\",n(t.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(t.blockquote,{children:[\"\\n\",i(t.p,{children:[\"[!NOTE]\\n\",n(t.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(t.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(t.ol,{children:[\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(t.h3,{children:\"Practical Steps\"}),\"\\n\",n(t.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(t.pre,{children:n(t.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(t.h2,{children:\"Conclusion\"}),\"\\n\",n(t.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "Legal and Financial Planning After a Diagnosis",
+    "description": "Understanding Power of Attorney, joint accounts, and medical directives within the Indian legal system.",
+    "section": "diagnosed",
+    "slug": "articles/legal-financial-planning-india",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "legal",
+      "financial",
+      "planning"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(t){const o={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...t.components};return i(e,{children:[n(o.h1,{children:\"Legal and Financial Planning After a Diagnosis\"}),\"\\n\",n(o.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores understanding power of attorney, joint accounts, and medical directives within the indian legal system.\"}),\"\\n\",n(o.h2,{children:\"Introduction\"}),\"\\n\",n(o.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(o.blockquote,{children:[\"\\n\",i(o.p,{children:[\"[!NOTE]\\n\",n(o.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(o.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(o.ol,{children:[\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(o.li,{children:[n(o.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(o.h3,{children:\"Practical Steps\"}),\"\\n\",n(o.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(o.pre,{children:n(o.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(o.h2,{children:\"Conclusion\"}),\"\\n\",n(o.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "How to Handle Agitation and Aggression",
+    "description": "Understanding the root causes of behavioral changes and learning how to de-escalate difficult situations calmly.",
+    "section": "caregiving",
+    "slug": "articles/managing-agitation",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "behavior",
+      "agitation",
+      "coping-strategies"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const t={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(t.h1,{children:\"How to Handle Agitation and Aggression\"}),\"\\n\",n(t.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores understanding the root causes of behavioral changes and learning how to de-escalate difficult situations calmly.\"}),\"\\n\",n(t.h2,{children:\"Introduction\"}),\"\\n\",n(t.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(t.blockquote,{children:[\"\\n\",i(t.p,{children:[\"[!NOTE]\\n\",n(t.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(t.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(t.ol,{children:[\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(t.h3,{children:\"Practical Steps\"}),\"\\n\",n(t.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(t.pre,{children:n(t.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(t.h2,{children:\"Conclusion\"}),\"\\n\",n(t.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "Nutrition and Feeding Challenges in Moderate Dementia",
+    "description": "How to handle appetite loss, swallowing difficulties, and ensure your loved one gets proper nutrition.",
+    "section": "caregiving",
+    "slug": "articles/nutrition-and-dementia",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "nutrition",
+      "daily-care",
+      "feeding"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const t={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(t.h1,{children:\"Nutrition and Feeding Challenges in Moderate Dementia\"}),\"\\n\",n(t.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores how to handle appetite loss, swallowing difficulties, and ensure your loved one gets proper nutrition.\"}),\"\\n\",n(t.h2,{children:\"Introduction\"}),\"\\n\",n(t.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(t.blockquote,{children:[\"\\n\",i(t.p,{children:[\"[!NOTE]\\n\",n(t.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(t.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(t.ol,{children:[\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(t.h3,{children:\"Practical Steps\"}),\"\\n\",n(t.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(t.pre,{children:n(t.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(t.h2,{children:\"Conclusion\"}),\"\\n\",n(t.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
+    "title": "Understanding Dementia: More Than Just Memory Loss",
+    "description": "A comprehensive guide to understanding what dementia is, how it differs from normal aging, and its impact on the brain.",
+    "section": "understand",
+    "slug": "articles/what-is-dementia",
+    "status": "draft",
+    "reviewDate": "2026-08-15T00:00:00.000Z",
+    "lastUpdated": "2026-08-15T00:00:00.000Z",
+    "sources": [],
+    "tags": [
+      "basics",
+      "symptoms",
+      "brain"
+    ],
+    "body": "const{Fragment:e,jsx:n,jsxs:i}=arguments[0];function _createMdxContent(o){const t={blockquote:\"blockquote\",code:\"code\",h1:\"h1\",h2:\"h2\",h3:\"h3\",li:\"li\",ol:\"ol\",p:\"p\",pre:\"pre\",strong:\"strong\",...o.components};return i(e,{children:[n(t.h1,{children:\"Understanding Dementia: More Than Just Memory Loss\"}),\"\\n\",n(t.p,{children:\"This is a draft foundational article for the Project Lantern platform. The content explores a comprehensive guide to understanding what dementia is, how it differs from normal aging, and its impact on the brain.\"}),\"\\n\",n(t.h2,{children:\"Introduction\"}),\"\\n\",n(t.p,{children:\"Dementia is a syndrome characterized by a deterioration in memory, thinking, behavior and the ability to perform everyday activities. Although dementia mainly affects older people, it is not a normal part of ageing. Worldwide, around 50 million people have dementia, and there are nearly 10 million new cases every year.\"}),\"\\n\",i(t.blockquote,{children:[\"\\n\",i(t.p,{children:[\"[!NOTE]\\n\",n(t.strong,{children:\"Pending Medical Review:\"}),\" This clinical information is currently awaiting formal review by the Project Lantern Medical Advisory Board.\"]}),\"\\n\"]}),\"\\n\",n(t.h2,{children:\"Key Points to Consider\"}),\"\\n\",i(t.ol,{children:[\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Medical Consultation:\"}),\" Always consult with a board-certified neurologist or geriatrician before making care decisions.\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Support Systems:\"}),\" Look into joining local support groups through organizations like the Alzheimer's and Related Disorders Society of India (ARDSI).\"]}),\"\\n\",i(t.li,{children:[n(t.strong,{children:\"Patience and Empathy:\"}),\" Caregiving requires immense emotional resilience.\"]}),\"\\n\"]}),\"\\n\",n(t.h3,{children:\"Practical Steps\"}),\"\\n\",n(t.p,{children:\"For families navigating this condition in India, understanding the trajectory of the disease is the first step toward effective caregiving. The lack of specialized memory clinics in tier-2 and tier-3 cities often delays diagnosis.\"}),\"\\n\",n(t.pre,{children:n(t.code,{className:\"language-javascript\",children:'// Placeholder for interactive or dynamic content\\nconst helpfulTip = \"Focus on the emotion, not the exact words.\";\\nconsole.log(helpfulTip);\\n'})}),\"\\n\",n(t.h2,{children:\"Conclusion\"}),\"\\n\",n(t.p,{children:\"We are building out the detailed clinical protocols for this section. Check back soon after our academic outreach phase is completed.\"})]})}return{default:function(e={}){const{wrapper:i}=e.components||{};return i?n(i,{...e,children:n(_createMdxContent,{...e})}):_createMdxContent(e)}};"
+  },
+  {
     "title": "After a Diagnosis: A Practical Guide for Indian Families",
     "description": "What to do in the weeks after a dementia diagnosis. Practical, honest guidance on the immediate steps, legal and financial planning, navigating the Indian healthcare system, and how to support the person diagnosed.",
     "section": "caregiving",
-    "slug": "after-diagnosis",
+    "slug": "articles/caregiving/after-diagnosis",
     "status": "draft",
     "author": "Project Lantern Editorial Team",
     "lastUpdated": "2026-08-01T00:00:00.000Z",
@@ -35,7 +195,7 @@
     "title": "Understanding the Different Types of Dementia",
     "description": "Dementia is not one disease. This guide explains the main types — Alzheimer's, vascular, Lewy body, and frontotemporal dementia — their differences, and why the distinction matters.",
     "section": "understand",
-    "slug": "types-of-dementia",
+    "slug": "articles/understand/types-of-dementia",
     "status": "draft",
     "author": "Project Lantern Editorial Team",
     "lastUpdated": "2026-08-01T00:00:00.000Z",
@@ -62,7 +222,7 @@
     "title": "What is Alzheimer's Disease?",
     "description": "A clear, plain-language introduction to Alzheimer's disease — what it is, how it differs from normal ageing, and why an early understanding matters for Indian families.",
     "section": "understand",
-    "slug": "what-is-alzheimers",
+    "slug": "articles/understand/what-is-alzheimers",
     "status": "draft",
     "author": "Project Lantern Editorial Team",
     "lastUpdated": "2026-08-01T00:00:00.000Z",

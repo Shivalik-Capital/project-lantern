@@ -27,6 +27,9 @@ export function Header() {
           <Link href="/methodology" aria-label="View our Methodology and Data Sourcing" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <BookOpen className="w-4 h-4" aria-hidden="true" /> Methodology
           </Link>
+          <Link href="/dashboard" aria-label="View Public Health Dashboard" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <BookOpen className="w-4 h-4" aria-hidden="true" /> Data Dashboard
+          </Link>
           <Link href="/clinical-board" aria-label="Learn about our Clinical Board" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <Users className="w-4 h-4" aria-hidden="true" /> Clinical Board
           </Link>
