@@ -157,7 +157,7 @@ export default function AboutPage() {
               professional in India who is willing to review educational content, we would
               be grateful to hear from you.
             </p>
-            <Link href="mailto:hello@projectlantern.in" className="btn btn-primary inline-flex">
+            <Link href="mailto:sorendatta7@gmail.com" className="btn btn-primary inline-flex">
               Get in touch
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
