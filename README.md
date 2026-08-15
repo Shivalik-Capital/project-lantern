@@ -1,71 +1,102 @@
 # Project Lantern
 
-[![Deploy with Vercel](https://vercel.com/button)](https://project-lantern-teal.vercel.app)
-**Live Demo:** [https://project-lantern-teal.vercel.app](https://project-lantern-teal.vercel.app)
+Project Lantern is a comprehensive, culturally-contextualized educational platform and data dashboard for Alzheimer's disease and dementia care in India.
 
-Project Lantern is an open-source educational platform dedicated to providing clear, culturally relevant, and medically sound information about Alzheimer's disease and dementia for Indian families.
+## Roadmap
 
-## Purpose
+### V1 — Foundation (Months 1–4)
 
-India has an estimated 5.3 million people living with dementia. Families often navigate the complexities of caregiving without adequate support or localized information. Project Lantern addresses this gap by offering:
-- Practical caregiving guides tailored to the Indian context.
-- A plain-language medical glossary.
-- A curated directory of support resources including national helplines and local memory clinics.
+**Goal:** A credible, fast, mobile-first educational website with medically reviewed content.
 
-## Core Principles
+**Deliverables:**
+- Core website: Home, About, Understanding Alzheimer's section, Basic Caregiving Guide
+- 10–15 well-written, medically reviewed educational articles in English
+- Simple glossary (searchable, non-AI)
+- India-specific resource directory: ARDSI chapters, Dementia India Alliance, national helplines — as structured data, not a link dump
+- Clear disclaimer on every page; medical reviewer credits on all content
+- Contact page; About the project page (explains nonprofit mission and personal motivation)
+- Full-text search (Pagefind)
+- Mobile-first, accessible design (WCAG 2.1 AA target)
+- Basic analytics (privacy-respecting, e.g., Plausible Analytics)
 
-1. **Evidence-Based:** All content is meticulously researched and reviewed by medical professionals. We do not offer diagnostic tools or symptom checkers.
-2. **Culturally Contextual:** Resources are specifically tailored for Indian families, addressing regional challenges and cultural nuances.
-3. **Completely Free:** The platform is accessible to all without paywalls, advertisements, affiliate links, or subscription fees.
+**Technology:** Next.js + MDX + Tailwind + Vercel. No backend database yet. Resource directory can be a JSON file in the repo at this stage.
 
-## Detailed Roadmap
+**Not in V1:** Dashboards, AI, multilingual content, user accounts.
 
-### Phase 1: Foundation (Completed)
-- Set up the Next.js 16.3 application architecture.
-- Establish the Tailwind v4 design system (Sage green and Amber color palette).
-- Create core layout components (Navigation Header, Footer, Helplines Banner).
-- Draft the initial set of educational articles and caregiving guides.
-- Build the interactive client-side glossary and resource directory.
+**Success metric:** 500 unique monthly visitors from India within 3 months of launch; zero factual errors in published content (enforced by review process).
 
-### Phase 2: Medical Review and Editorial Refinement (In Progress)
-- Onboard founding medical reviewers (geriatricians, neurologists, and dementia specialists).
-- Review all foundational articles for clinical accuracy.
-- Refine editorial guidelines for future content contributors.
-- Establish partnerships with local NGOs and ARDSI chapters for directory verification.
+### V2 — Data Dashboard (Months 5–9)
 
-### Phase 3: Content Expansion
-- Expand the article library to cover late-stage care and legal considerations in India.
-- Integrate Velite for robust MDX content management.
-- Implement full-text search across the platform using Pagefind.
+**Goal:** Add interactive public-health dashboards that make India-specific dementia data accessible and visual.
 
-### Phase 4: Multilingual Support
-- Architect the platform for internationalization (i18n).
-- Translate foundational content into Hindi, Tamil, and Telugu.
-- Partner with regional experts to ensure translated content maintains clinical accuracy and cultural sensitivity.
+**Deliverables:**
+- India state-level choropleth map: estimated dementia prevalence (from LASI/LASI-DAD)
+- National trend chart: dementia burden 1990–2021 (GBD/IHME data)
+- Risk factor visualization: contribution of diabetes, smoking, hypertension, low education to dementia risk
+- Healthcare access map: geriatric specialist density by state (from NHM data)
+- "India in Global Context" chart: India vs comparable countries (using OWID/IHME data)
+- Data sourcing transparency panel on every chart ("This data comes from IHME GBD 2023, downloaded [date]")
+- FastAPI backend deployed on Render
+- PostgreSQL on Supabase with pre-aggregated data tables
+- Dashboard pages are server-side rendered (good SEO and performance)
 
-### Phase 5: Public Health Data Integration
-- Develop interactive data visualization dashboards.
-- Integrate national public health data (e.g., LASI and IHME GBD data) to highlight state-level prevalence and risk factors.
-- Provide accessible reporting for researchers and policymakers.
+**Data sources activated in V2:** IHME GBD CSVs, Census 2011 (elderly population), NHM infrastructure data, OWID charts (embedded with attribution)
 
-## Local Development
+**Not in V2:** AI features, Hindi content, user accounts.
 
-The project is built using Next.js, React, TypeScript, and Tailwind CSS.
+**Success metric:** Dashboard pages average >2 minutes time-on-page; charts cited by at least one researcher or journalist.
 
-```bash
-# Install dependencies
-npm install
+### V3 — AI Accessibility & Hindi Content (Months 10–15)
 
-# Start the development server
-npm run dev
-```
+**Goal:** Add carefully bounded AI features and begin multilingual content.
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+**Deliverables:**
+- "Ask the Guide" content assistant (Feature A — RAG-based, Claude-powered)
+- Plain-language term explainer (Feature B)
+- Caregiver Stage Navigator tool (Feature D — primarily rule-based)
+- Hindi translation of top 5 most-visited articles (human-translated, not AI-generated)
+- AI-generated multilingual summaries for remaining articles (clearly labeled as AI-generated)
+- Caregiver stories section: real first-person accounts submitted and reviewed
+- Crisis/emergency redirect: if AI receives concerning queries, immediate redirect to helplines
 
-## Contributing
+**Not in V3:** User accounts, community features, native app.
 
-We welcome contributions from developers, researchers, and medical professionals. Please review our contribution guidelines before submitting pull requests.
+**Success metric:** AI assistant used on >20% of sessions; Hindi content accounts for >15% of traffic; zero complaints about AI overstepping into medical advice.
 
-## License
+### V4 — Community & Verified Resources (Months 16–24)
 
-This project is licensed under the MIT License.
+**Goal:** Build sustainable engagement and a community layer.
+
+**Deliverables:**
+- User accounts (optional; email/OTP login for Indian users)
+- Caregiver Forum: moderated peer support community
+- Facility directory with community-submitted and verified entries (memory clinics, day care centers, support groups)
+- Resource Finder tool (Feature E — hybrid AI + structured data)
+- Human-verified translations of top 20 articles into Hindi, Tamil, Telugu
+- Bookmark and save features (requires account)
+- Weekly/monthly caregiver email newsletter
+- DPDP Act 2023 compliance: privacy policy, data minimization, consent flows, right to erasure
+
+**Technical additions:** Supabase Auth, moderation workflow, email system (Resend or Postmark)
+
+**Not in V4:** Native mobile app.
+
+**Success metric:** 50+ verified facility listings; active community forum with >100 members; 5,000+ monthly visitors.
+
+### V5 — Depth, Scale & Partnerships (Year 2–3)
+
+**Goal:** Establish the platform as the authoritative, sustainable, India-specific Alzheimer's educational resource.
+
+**Deliverables:**
+- Progressive Web App (PWA) for offline access (critical for areas with poor connectivity)
+- Content in 6 Indian languages with human-translated, professionally reviewed articles
+- Partnership with ARDSI for data sharing and content collaboration
+- Research data portal: aggregate, de-identified datasets curated from public sources for Indian researchers
+- Caregiver burden tracking (optional, user-initiated, privacy-preserving — stored locally on device)
+- Video library: expert interviews, caregiving demonstrations
+- Annual India Dementia Data Report (PDF + interactive web version)
+- Explore Ayushman Bharat API integration for coverage information
+
+**Governance:** If the platform reaches significant scale, explore formal nonprofit registration (Section 8/12A under Indian Income Tax Act) or FCRA registration if international funding is sought.
+
+**Success metric:** 25,000+ monthly visitors; referenced by MoHFW or NIMHANS publications; sustainable funding (grants, CSR donations).
