@@ -1,11 +1,18 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
-import { BookOpen, MapPin, Heart, Users } from 'lucide-react'
+import { BookOpen, MapPin, Heart, Users, X, Menu } from 'lucide-react'
 
 export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-surface/80 backdrop-blur-md">
       <div className="container-layout flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsMobileMenuOpen(false)}>
           <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
             <Heart className="w-5 h-5 fill-white" />
           </div>
@@ -31,11 +38,36 @@ export function Header() {
           </Link>
         </nav>
         <div className="md:hidden flex items-center">
-          <button aria-label="Open mobile menu" className="p-2 text-text-muted hover:text-primary">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+          <button 
+            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"} 
+            className="p-2 text-text-muted hover:text-primary"
+            onClick={toggleMenu}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t border-border bg-surface px-4 py-4 space-y-4 shadow-lg absolute w-full left-0">
+          <Link href="/charter" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-primary" /> Editorial Charter
+          </Link>
+          <Link href="/methodology" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-primary" /> Methodology
+          </Link>
+          <Link href="/clinical-board" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
+            <Users className="w-5 h-5 text-primary" /> Clinical Board
+          </Link>
+          <Link href="/understand" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
+            <Heart className="w-5 h-5 text-primary" /> Draft Articles
+          </Link>
+          <Link href="/find-help" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
+            <MapPin className="w-5 h-5 text-primary" /> Resources
+          </Link>
+        </div>
+      )}
     </header>
   )
 }
