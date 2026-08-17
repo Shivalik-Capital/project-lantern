@@ -17,7 +17,7 @@ const CAREGIVING_ARTICLES = [
       'What to do in the weeks after a dementia diagnosis. Practical, honest guidance on the immediate steps, legal and financial planning, navigating the Indian healthcare system and how to support the person diagnosed.',
     readingTime: 10,
     tags: ['First Steps', 'Planning'],
-    status: 'draft' as const,
+    status: 'under-review' as const,
   },
 ]
 
@@ -58,6 +58,9 @@ export default function CaregivingPage() {
                       ))}
                       {article.status === 'draft' && (
                         <span className="tag tag-draft">Draft: not yet medically reviewed</span>
+                      )}
+                      {article.status === 'under-review' && (
+                        <span className="tag tag-amber">Under clinical review by SCARF India</span>
                       )}
                       <span className="flex items-center gap-1 text-xs text-text-subtle ml-auto">
                         <Clock className="w-3 h-3" aria-hidden="true" />

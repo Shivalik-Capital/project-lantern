@@ -10,7 +10,7 @@ const ARTICLES: Record<string, {
   description: string
   readingTime: number
   tags: string[]
-  status: 'draft' | 'reviewed'
+  status: 'draft' | 'under-review' | 'reviewed'
   author: string
   lastUpdated: string
   sources: { name: string; url: string }[]
@@ -22,7 +22,7 @@ const ARTICLES: Record<string, {
       'What to do in the weeks after a dementia diagnosis. Practical guidance on immediate steps, legal planning, navigating the Indian healthcare system and how to support the person diagnosed.',
     readingTime: 10,
     tags: ['First Steps', 'Planning'],
-    status: 'draft',
+    status: 'under-review',
     author: 'Project Lantern Editorial Team',
     lastUpdated: '2026-08-01',
     sources: [
@@ -108,6 +108,9 @@ export default async function CaregivingArticlePage(
               ))}
               {article.status === 'draft' && (
                 <span className="tag tag-draft">Draft: not yet medically reviewed</span>
+              )}
+              {article.status === 'under-review' && (
+                <span className="tag tag-amber">Under clinical review by SCARF India</span>
               )}
             </div>
             <h1 className="font-sans font-800 text-text mb-4">{article.title}</h1>

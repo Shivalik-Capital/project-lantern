@@ -146,16 +146,10 @@ export default function AboutPage() {
               Medical review
             </h2>
             <p className="text-text-muted leading-relaxed mb-4">
-              All content on this platform is currently marked{' '}
-              <span className="tag tag-draft">draft</span> and has not been reviewed by
-              a medical professional. Before any article is marked as reviewed, it will be
-              read and approved by a named, credentialed medical professional: a geriatrician,
-              neurologist or dementia specialist.
+              Our V1 foundational articles are currently <span className="tag tag-amber">under clinical review</span> by the incredible medical team at <strong>SCARF India (Schizophrenia Research Foundation)</strong>. 
             </p>
             <p className="text-text-muted leading-relaxed mb-5">
-              We are actively seeking a medical reviewer. If you are a qualified medical
-              professional in India who is willing to review educational content, we would
-              be grateful to hear from you.
+              Before any article exits this review phase, it is read and approved by a named, credentialed medical professional to ensure absolute clinical accuracy. We do not publish unverified medical claims.
             </p>
             <Link href="mailto:sorendatta7@gmail.com" className="btn btn-primary inline-flex">
               Get in touch

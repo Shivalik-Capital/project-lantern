@@ -53,6 +53,9 @@ export default function UnderstandPage() {
                       {article.status === 'draft' && (
                         <span className="tag tag-draft">Draft: not yet medically reviewed</span>
                       )}
+                      {article.status === 'under-review' && (
+                        <span className="tag tag-amber">Under clinical review by SCARF India</span>
+                      )}
                       <span className="flex items-center gap-1 text-xs text-text-subtle ml-auto">
                         <Clock className="w-3 h-3" aria-hidden="true" />
                         {article.readingTime} min read
@@ -83,9 +86,7 @@ export default function UnderstandPage() {
                 not medical professionals. Every factual claim is sourced.
               </p>
               <p className="text-sm text-text-muted leading-relaxed">
-                Articles are currently in <strong className="text-text">draft status</strong> and
-                have not yet been reviewed by a medical professional.
-                We are actively seeking a medical reviewer.
+                Articles are currently undergoing <strong>clinical review</strong> by the medical team at SCARF India.
               </p>
             </div>
             <div className="card p-6">

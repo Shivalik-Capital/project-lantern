@@ -54,9 +54,10 @@ export default async function UnderstandArticlePage({ params }: { params: Promis
                 </span>
               ))}
               {article.status === 'draft' && (
-                <span className="tag bg-emergency-bg text-emergency border border-emergency/20">
-                  Awaiting Clinical Review
-                </span>
+                <span className="tag tag-draft">Draft: not yet medically reviewed</span>
+              )}
+              {article.status === 'under-review' && (
+                <span className="tag tag-amber">Under clinical review by SCARF India</span>
               )}
             </div>
 
