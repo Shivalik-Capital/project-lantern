@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { BookOpen, MapPin, Heart, Users, X, Menu } from 'lucide-react'
+import { BookOpen, MapPin, Heart, Users, X, Menu, Search } from 'lucide-react'
+import { SearchModal } from '@/components/ui/SearchModal'
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
 
@@ -42,8 +44,22 @@ export function Header() {
           <Link href="/find-help" aria-label="Find Resources and Help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <MapPin className="w-4 h-4" aria-hidden="true" /> Resources
           </Link>
+          <button 
+            onClick={() => setIsSearchOpen(true)}
+            aria-label="Search" 
+            className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5 ml-2"
+          >
+            <Search className="w-5 h-5" aria-hidden="true" />
+          </button>
         </nav>
-        <div className="md:hidden flex items-center">
+        <div className="md:hidden flex items-center gap-2">
+          <button 
+            onClick={() => setIsSearchOpen(true)}
+            aria-label="Search" 
+            className="p-2 text-text-muted hover:text-primary"
+          >
+            <Search className="w-5 h-5" aria-hidden="true" />
+          </button>
           <button 
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"} 
             className="p-2 text-text-muted hover:text-primary"
@@ -74,6 +90,8 @@ export function Header() {
           </Link>
         </div>
       )}
+
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </header>
   )
 }
