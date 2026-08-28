@@ -17,14 +17,32 @@ export function RiskFactorChart() {
   const [source, setSource] = useState('IHME GBD 2023')
 
   useEffect(() => {
-    // Using static data for V1
-    setData([
-      { factor: 'Hypertension', impact: 42 },
-      { factor: 'Diabetes', impact: 35 },
-      { factor: 'Obesity', impact: 22 },
-      { factor: 'Smoking', impact: 18 },
-    ])
-    setLoading(false)
+    async function fetchData() {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000'
+        const res = await fetch(`${apiUrl}/api/v1/risk-factors`)
+        if (!res.ok) throw new Error('API down')
+        const json = await res.json()
+        setData([
+          { factor: 'Hypertension', impact: Math.round(json.hypertension_impact * 100) },
+          { factor: 'Diabetes', impact: Math.round(json.diabetes_impact * 100) },
+          { factor: 'Obesity', impact: Math.round(json.obesity_impact * 100) },
+          { factor: 'Smoking', impact: Math.round(json.smoking_impact * 100) },
+        ])
+        if (json.source) setSource(json.source)
+      } catch (e) {
+        // Fallback to static data if backend is not running or deployed yet
+        setData([
+          { factor: 'Hypertension', impact: 42 },
+          { factor: 'Diabetes', impact: 35 },
+          { factor: 'Obesity', impact: 22 },
+          { factor: 'Smoking', impact: 18 },
+        ])
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchData()
   }, [])
 
   if (loading) return <div className="h-80 flex items-center justify-center text-text-muted">Loading chart data...</div>

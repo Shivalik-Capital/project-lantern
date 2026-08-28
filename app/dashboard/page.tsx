@@ -1,5 +1,6 @@
 import { NationalTrendChart } from '@/components/dashboard/NationalTrendChart'
 import { RiskFactorChart } from '@/components/dashboard/RiskFactorChart'
+import { GlobalContextChart } from '@/components/dashboard/GlobalContextChart'
 import { IndiaMap } from '@/components/visualizations/IndiaMap'
 
 export const metadata = {
@@ -34,8 +35,9 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="w-full">
+        <div className="w-full grid grid-rows-2 gap-8">
           <RiskFactorChart />
+          <GlobalContextChart />
         </div>
       </div>
     </div>
