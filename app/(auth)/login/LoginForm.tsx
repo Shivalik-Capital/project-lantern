@@ -14,6 +14,8 @@ export function LoginForm() {
   const router = useRouter()
   const supabase = createClient()
 
+  const [showPassword, setShowPassword] = useState(false)
+
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
@@ -82,17 +84,24 @@ export function LoginForm() {
         <label htmlFor="password" className="block text-sm font-sans font-600 text-text">
           Password
         </label>
-        <div className="mt-1">
+        <div className="mt-1 relative">
           <input
             id="password"
             name="password"
-            type="password"
+            type={showPassword ? "text" : "password"}
             autoComplete="current-password"
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="appearance-none block w-full px-3 py-2 border border-border rounded-md shadow-sm placeholder-text-subtle focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
           />
+          <button
+            type="button"
+            className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5 text-text-muted hover:text-primary"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? 'Hide' : 'Show'}
+          </button>
         </div>
       </div>
 
@@ -112,6 +121,10 @@ export function LoginForm() {
         >
           Sign Up
         </button>
+      </div>
+
+      <div className="mt-4 text-center text-xs text-text-muted">
+        By continuing, you agree to our <a href="/privacy" className="text-amber hover:underline">Privacy Policy</a> and strict medical data standards. We never sell your data.
       </div>
     </form>
   )
