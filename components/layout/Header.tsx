@@ -1,13 +1,32 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { BookOpen, MapPin, Heart, Users, X, Menu, Search } from 'lucide-react'
+import { BookOpen, MapPin, Heart, Users, X, Menu, Search, User } from 'lucide-react'
 import { SearchModal } from '@/components/ui/SearchModal'
+import { createClient } from '@/lib/supabase/client'
+import type { User as SupabaseUser } from '@supabase/supabase-js'
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [user, setUser] = useState<SupabaseUser | null>(null)
+
+  useEffect(() => {
+    const supabase = createClient()
+    
+    // Check active session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null)
+    })
+
+    // Listen for changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null)
+    })
+
+    return () => subscription.unsubscribe()
+  }, [])
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
 
@@ -44,13 +63,25 @@ export function Header() {
           <Link href="/find-help" aria-label="Find Resources and Help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <MapPin className="w-4 h-4" aria-hidden="true" /> Resources
           </Link>
-          <button 
-            onClick={() => setIsSearchOpen(true)}
-            aria-label="Search" 
-            className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5 ml-2"
-          >
-            <Search className="w-5 h-5" aria-hidden="true" />
-          </button>
+          <div className="flex items-center gap-4 border-l border-border pl-6 ml-2">
+            <button 
+              onClick={() => setIsSearchOpen(true)}
+              aria-label="Search" 
+              className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5"
+            >
+              <Search className="w-5 h-5" aria-hidden="true" />
+            </button>
+            
+            {user ? (
+              <Link href="/tracker" className="btn btn-primary !min-h-9 !px-4 !py-1.5 !text-xs">
+                <User className="w-3.5 h-3.5" /> Dashboard
+              </Link>
+            ) : (
+              <Link href="/login" className="btn btn-outline !min-h-9 !px-4 !py-1.5 !text-xs">
+                Sign In
+              </Link>
+            )}
+          </div>
         </nav>
         <div className="md:hidden flex items-center gap-2">
           <button 
@@ -88,6 +119,16 @@ export function Header() {
           <Link href="/find-help" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" /> Resources
           </Link>
+          <hr className="border-border" />
+          {user ? (
+            <Link href="/tracker" onClick={toggleMenu} className="block text-base font-600 text-primary hover:text-primary-dark flex items-center gap-2">
+              <User className="w-5 h-5" /> Dashboard
+            </Link>
+          ) : (
+            <Link href="/login" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
+              <User className="w-5 h-5 text-primary" /> Sign In
+            </Link>
+          )}
         </div>
       )}
 
