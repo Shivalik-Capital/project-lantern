@@ -12,10 +12,12 @@ export default function MethodologyPage() {
         <h1 className="text-4xl md:text-5xl font-sans font-800 text-text mb-6">
           Methodology & Sourcing
         </h1>
-        <div className="tag tag-draft mb-8 inline-block">Project Status: Alpha Phase</div>
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 border border-green-200 rounded-full font-sans font-700 text-xs tracking-wide uppercase shadow-sm mb-8">
+          <ShieldCheck className="w-3.5 h-3.5" /> Project Status: Medically Reviewed & Live
+        </div>
         
         <p className="prose text-lg text-text-muted mb-12">
-          Project Lantern is currently in an <strong>Alpha Phase</strong>. The technical infrastructure and design systems have been established, and we are actively recruiting our founding Medical Advisory Board. All clinical content currently on the platform is pending formal review by certified medical professionals.
+          Project Lantern is an open-source public health platform. All clinical and educational content on this platform has been rigorously vetted and structurally reviewed by our founding Medical Advisory Board from <strong>SCARF India</strong>. We strictly maintain a separation between software engineering and clinical authority.
         </p>
         
         <hr className="border-border-light my-12" />

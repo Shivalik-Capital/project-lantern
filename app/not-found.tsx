@@ -16,8 +16,8 @@ export default function NotFound() {
         Page Not Found
       </h1>
       
-      <p className="text-lg text-text-muted max-w-lg mx-auto mb-10">
-        We are constantly updating our clinical and educational resources. The page you are looking for may have been moved, updated, or removed during our Alpha phase.
+      <p className="text-lg text-text-muted leading-relaxed mb-8 max-w-md">
+        We are constantly updating our clinical and educational resources. The page you are looking for may have been moved, updated, or removed.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
