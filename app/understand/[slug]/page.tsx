@@ -6,6 +6,7 @@ import { DisclaimerBanner } from '@/components/layout/DisclaimerBanner'
 
 import { articles } from '@/.velite'
 import { MDXContent } from '@/components/mdx/MDXContent'
+import { ShareButton } from '@/components/ui/ShareButton'
 
 export async function generateStaticParams() {
   return articles
@@ -89,6 +90,10 @@ export default async function UnderstandArticlePage({ params }: { params: Promis
                 </div>
               )}
             </div>
+
+            <div className="mt-8">
+              <ShareButton title={article.title} text={article.description} />
+            </div>
           </div>
         </div>
       </header>
@@ -96,8 +101,12 @@ export default async function UnderstandArticlePage({ params }: { params: Promis
       {/* Article Content */}
       <div className="container-layout">
         <div className="content-column">
-          <div className="prose prose-lg max-w-none mb-16">
+          <div className="prose prose-lg max-w-none mb-12">
             <MDXContent code={article.body} />
+          </div>
+
+          <div className="flex justify-center mb-12">
+            <ShareButton title={article.title} text={article.description} />
           </div>
 
           <hr className="border-border mb-12" />

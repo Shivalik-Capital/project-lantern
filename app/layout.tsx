@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     siteName: 'Project Lantern',
   },
+  manifest: '/manifest.json',
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {

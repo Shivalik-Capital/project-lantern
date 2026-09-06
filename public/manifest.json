@@ -1,0 +1,16 @@
+{
+  "name": "Project Lantern",
+  "short_name": "Lantern",
+  "description": "Alzheimer's Education for Indian Families",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a7c6f",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
