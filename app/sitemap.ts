@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://projectlantern.org' // Replace with your actual domain
+  const baseUrl = 'https://project-lantern-teal.vercel.app'
 
   return [
     {
