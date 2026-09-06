@@ -17,7 +17,7 @@ export default function MethodologyPage() {
         </div>
         
         <p className="prose text-lg text-text-muted mb-12">
-          Project Lantern is an open-source public health platform. All clinical and educational content on this platform has been rigorously vetted and structurally reviewed by our founding Medical Advisory Board from <strong>SCARF India</strong>. We strictly maintain a separation between software engineering and clinical authority.
+          Project Lantern is an open-source public health platform. All clinical and educational content on this platform has been rigorously vetted and structurally reviewed by our founding Medical Advisory Board from <strong>SCARF Chennai</strong>. We strictly maintain a separation between software engineering and clinical authority.
         </p>
         
         <hr className="border-border-light my-12" />

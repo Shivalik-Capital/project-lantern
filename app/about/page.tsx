@@ -146,7 +146,7 @@ export default function AboutPage() {
               Medical review
             </h2>
             <p className="text-text-muted leading-relaxed mb-4">
-              Our V1 foundational articles are currently <span className="tag tag-amber">under clinical review</span> by the incredible medical team at <strong>SCARF India (Schizophrenia Research Foundation)</strong>. 
+              Our V1 foundational articles are currently <span className="tag tag-amber">under clinical review</span> by the incredible medical team at <strong>SCARF Chennai (Schizophrenia Research Foundation)</strong>. 
             </p>
             <p className="text-text-muted leading-relaxed mb-5">
               Before any article exits this review phase, it is read and approved by a named, credentialed medical professional to ensure absolute clinical accuracy. We do not publish unverified medical claims.

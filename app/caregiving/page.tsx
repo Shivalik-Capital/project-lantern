@@ -60,7 +60,7 @@ export default function CaregivingPage() {
                         <span className="tag tag-draft">Draft: not yet medically reviewed</span>
                       )}
                       {article.status === 'under-review' && (
-                        <span className="tag tag-amber">Under clinical review by SCARF India</span>
+                        <span className="tag tag-amber">Under clinical review by SCARF Chennai</span>
                       )}
                       {article.status === 'published' && (
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 border border-green-200 rounded-full font-sans font-700 text-xs tracking-wide uppercase shadow-sm">

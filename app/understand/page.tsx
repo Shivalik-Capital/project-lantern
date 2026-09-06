@@ -54,7 +54,7 @@ export default function UnderstandPage() {
                         <span className="tag tag-draft">Draft: not yet medically reviewed</span>
                       )}
                       {article.status === 'under-review' && (
-                        <span className="tag tag-amber">Under clinical review by SCARF India</span>
+                        <span className="tag tag-amber">Under clinical review by SCARF Chennai</span>
                       )}
                       {article.status === 'published' && (
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 border border-green-200 rounded-full font-sans font-700 text-xs tracking-wide uppercase shadow-sm">
@@ -92,7 +92,7 @@ export default function UnderstandPage() {
                 not medical professionals. Every factual claim is sourced.
               </p>
               <p className="text-sm text-text-muted leading-relaxed">
-                Articles marked as 'Published' have been <strong>medically reviewed</strong> by the clinical team at SCARF India to ensure accuracy.
+                Articles marked as 'Published' have been <strong>medically reviewed</strong> by the clinical team at SCARF Chennai to ensure accuracy.
               </p>
             </div>
             <div className="card p-6">

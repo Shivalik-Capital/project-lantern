@@ -110,7 +110,7 @@ export default async function CaregivingArticlePage(
                 <span className="tag tag-draft">Draft: not yet medically reviewed</span>
               )}
               {article.status === 'under-review' && (
-                <span className="tag tag-amber">Under clinical review by SCARF India</span>
+                <span className="tag tag-amber">Under clinical review by SCARF Chennai</span>
               )}
             </div>
             <h1 className="font-sans font-800 text-text mb-4">{article.title}</h1>

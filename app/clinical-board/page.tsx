@@ -42,7 +42,7 @@ export default function ClinicalBoardPage() {
               <h3 className="font-sans font-800 text-xl text-text mb-2">Dr. Rohith Khanna Deivasigamani</h3>
               <div className="flex items-start gap-2 mt-2 text-text-muted">
                 <Building2 className="w-4 h-4 mt-1 shrink-0" />
-                <span className="text-sm font-600">SCARF India (Schizophrenia Research Foundation)</span>
+                <span className="text-sm font-600">SCARF Chennai (Schizophrenia Research Foundation)</span>
               </div>
               <p className="text-sm text-text-muted mt-4 leading-relaxed flex-grow">
                 Dr. Rohith brings extensive experience in geriatric mental health and dementia care, helping ensure our resources are clinically precise and highly practical for families navigating Alzheimer's in India.
@@ -54,7 +54,7 @@ export default function ClinicalBoardPage() {
               <h3 className="font-sans font-800 text-xl text-text mb-2">Dr. Abitha</h3>
               <div className="flex items-start gap-2 mt-2 text-text-muted">
                 <Building2 className="w-4 h-4 mt-1 shrink-0" />
-                <span className="text-sm font-600">SCARF India (Schizophrenia Research Foundation)</span>
+                <span className="text-sm font-600">SCARF Chennai (Schizophrenia Research Foundation)</span>
               </div>
               <p className="text-sm text-text-muted mt-4 leading-relaxed flex-grow">
                 Dr. Abitha specializes in the presentation and progression of cognitive disorders. Her detailed editorial reviews ensure our symptom guides are accurate, compassionate, and easy to understand.
@@ -66,10 +66,10 @@ export default function ClinicalBoardPage() {
               <h3 className="font-sans font-800 text-xl text-text mb-2">Dr. Sridhar Vaitheswaran</h3>
               <div className="flex items-start gap-2 mt-2 text-text-muted">
                 <Building2 className="w-4 h-4 mt-1 shrink-0" />
-                <span className="text-sm font-600">SCARF India (Schizophrenia Research Foundation)</span>
+                <span className="text-sm font-600">SCARF Chennai (Schizophrenia Research Foundation)</span>
               </div>
               <p className="text-sm text-text-muted mt-4 leading-relaxed">
-                As a senior consultant, Dr. Vaitheswaran's leadership in dementia care at SCARF India has been instrumental in shaping the vision of Project Lantern's medical accuracy and support for caregivers.
+                As a senior consultant, Dr. Vaitheswaran's leadership in dementia care at SCARF Chennai has been instrumental in shaping the vision of Project Lantern's medical accuracy and support for caregivers.
               </p>
             </div>
           </div>
