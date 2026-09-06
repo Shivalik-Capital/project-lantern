@@ -16,6 +16,13 @@ const inter = Inter({
   display: 'swap',
 })
 
+export const viewport: import('next').Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#4a7c6f',
+}
+
 export const metadata: Metadata = {
   title: {
     default: 'Project Lantern: Alzheimer\'s Care in India',

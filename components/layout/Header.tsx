@@ -38,8 +38,8 @@ export function Header() {
           <Link href="/clinical-board" aria-label="Learn about our Clinical Board" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <Users className="w-4 h-4" aria-hidden="true" /> Clinical Board
           </Link>
-          <Link href="/understand" aria-label="Read Draft Articles" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Heart className="w-4 h-4" aria-hidden="true" /> Draft Articles
+          <Link href="/understand" aria-label="Read Articles" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
+            <Heart className="w-4 h-4" aria-hidden="true" /> Articles
           </Link>
           <Link href="/find-help" aria-label="Find Resources and Help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
             <MapPin className="w-4 h-4" aria-hidden="true" /> Resources
@@ -83,7 +83,7 @@ export function Header() {
             <Users className="w-5 h-5 text-primary" /> Clinical Board
           </Link>
           <Link href="/understand" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-            <Heart className="w-5 h-5 text-primary" /> Draft Articles
+            <Heart className="w-5 h-5 text-primary" /> Articles
           </Link>
           <Link href="/find-help" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
             <MapPin className="w-5 h-5 text-primary" /> Resources

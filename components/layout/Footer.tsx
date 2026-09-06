@@ -27,6 +27,7 @@ const FOOTER_LINKS = [
     heading: 'About',
     links: [
       { label: 'Our Story', href: '/about' },
+      { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Contributing', href: 'https://github.com', external: true },
     ],
   },
@@ -121,7 +122,7 @@ export function Footer() {
             <strong className="text-text-muted">Disclaimer:</strong> This platform provides educational information only.
             It does not constitute medical advice, diagnosis or treatment.
             Always consult a qualified healthcare professional for medical concerns.
-            All articles on this site are marked as draft and have not yet been medically reviewed.
+            All articles on this site marked as 'Published' have been medically reviewed by our Clinical Board.
           </p>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-text-subtle">
             <p>© {currentYear} Project Lantern. Code: MIT licence. Content: CC BY 4.0.</p>
