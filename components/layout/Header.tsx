@@ -74,7 +74,7 @@ export function Header() {
             
             {user ? (
               <Link href="/tracker" className="btn btn-primary !min-h-9 !px-4 !py-1.5 !text-xs">
-                <User className="w-3.5 h-3.5" /> Dashboard
+                <User className="w-3.5 h-3.5" /> Daily Log
               </Link>
             ) : (
               <Link href="/login" className="btn btn-outline !min-h-9 !px-4 !py-1.5 !text-xs">
@@ -122,7 +122,7 @@ export function Header() {
           <hr className="border-border" />
           {user ? (
             <Link href="/tracker" onClick={toggleMenu} className="block text-base font-600 text-primary hover:text-primary-dark flex items-center gap-2">
-              <User className="w-5 h-5" /> Dashboard
+              <User className="w-5 h-5" /> Daily Log
             </Link>
           ) : (
             <Link href="/login" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">

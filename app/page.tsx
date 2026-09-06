@@ -51,12 +51,12 @@ export default function HomePage() {
             An evidence-based, medically bounded framework waiting for clinical leadership. Built to serve 8.8 million families.
           </motion.p>
           <motion.div variants={FADE_UP} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-            <Link href="/clinical-board" className="btn btn-primary w-full sm:w-auto text-base px-8 py-4 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
-              Join the Clinical Board
+            <Link href="/tracker" className="btn btn-primary w-full sm:w-auto text-base px-8 py-4 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
+              Start Daily Symptom Log
               <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
             </Link>
-            <Link href="/charter" className="btn btn-outline w-full sm:w-auto text-base px-8 py-4 bg-surface/50 backdrop-blur-sm">
-              Read our Editorial Charter
+            <Link href="/understand" className="btn btn-outline w-full sm:w-auto text-base px-8 py-4 bg-surface/50 backdrop-blur-sm">
+              Read our Guides
             </Link>
           </motion.div>
         </motion.div>

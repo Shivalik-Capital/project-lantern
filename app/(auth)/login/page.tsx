@@ -22,7 +22,13 @@ export default function LoginPage() {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-surface py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-border">
+        <div className="card py-8 px-4 sm:px-10">
+          <div className="mb-6 p-4 bg-primary-lighter border border-primary-light rounded-md text-center">
+            <h3 className="font-sans font-700 text-primary-dark mb-1">Track Daily Progress</h3>
+            <p className="text-sm text-text-muted">
+              Create a free, secure account to log daily symptoms and build a history you can share with your doctor.
+            </p>
+          </div>
           <LoginForm />
         </div>
       </div>

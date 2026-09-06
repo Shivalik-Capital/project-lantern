@@ -34,11 +34,12 @@ export default function PrivacyPolicyPage() {
 
           <h2>3. Information We Collect</h2>
           <p>
-            As a public health educational resource, we intentionally minimize the data we collect.
+            We collect information in the following ways:
           </p>
           <ul>
-            <li><strong>Personal Information:</strong> We do not require you to create an account to read our articles. We only collect personal information (such as your name or email address) if you voluntarily provide it to us by contacting us directly.</li>
-            <li><strong>Usage Data:</strong> We may automatically collect non-personally identifiable information when you visit, use, or navigate the site. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, referring URLs, and information about how and when you use our website. We use this information strictly to maintain the security and operation of our website, and for our internal analytics and reporting purposes.</li>
+            <li><strong>Personal Information (Optional):</strong> You are not required to create an account to read our articles. However, if you choose to use the Daily Symptom Tracker, we collect your email address and password to securely create and maintain your account.</li>
+            <li><strong>Health Data (Optional):</strong> If you use the Daily Symptom Tracker, any data you log (such as sleep quality, wandering incidents, or agitation levels) is stored securely in our database. This data is strictly private, encrypted at rest, and linked only to your account so that you can view your own history. We do not sell this data, and we do not use it for marketing.</li>
+            <li><strong>Usage Data:</strong> We may automatically collect non-personally identifiable information when you visit, use, or navigate the site. This information does not reveal your specific identity but may include device and usage information, such as your IP address, browser characteristics, and referring URLs. We use this strictly to maintain the security and operation of our website, and for our internal analytics.</li>
           </ul>
 
           <h2>4. How We Use Your Information</h2>
