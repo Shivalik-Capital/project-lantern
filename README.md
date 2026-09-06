@@ -4,19 +4,17 @@ Project Lantern is a comprehensive, culturally-contextualized educational platfo
 
 ## Roadmap
 
-V1 — Foundation (Months 1–4)
+V1 — The Educational Foundation ✅ COMPLETED
 
-Goal: A credible, fast, mobile-first educational website with medically reviewed content.
+Goal: Build the core content repository and resource directory. We are not building dashboards or complex features yet. This is about establishing trust and authority.
 
 Deliverables:
 
-Core website: Home, About, Understanding Alzheimer's section, Basic Caregiving Guide
-10–15 well-written, medically reviewed educational articles in English
-Simple glossary (searchable, non-AI)
-India-specific resource directory: ARDSI chapters, Dementia India Alliance, national helplines — as structured data, not a link dump
-Clear disclaimer on every page; medical reviewer credits on all content
-Contact page; About the project page (explains nonprofit mission and personal motivation)
-Full-text search (Pagefind)
+Core website structure (Home, Understand, Caregiving, Glossary, Find Help, About)
+10-15 high-quality medical articles explaining Alzheimer’s and Dementia in simple English (written by us, reviewed by doctors)
+A simple glossary of terms
+A directory of NGOs, memory clinics, and helplines across major Indian cities (structured by state/city)
+Clear, prominent disclaimer on every page: "Project Lantern provides educational information, not medical advice. Content reviewed by [Doctor Name], [Hospital]."
 Mobile-first, accessible design (WCAG 2.1 AA target)
 Basic analytics (privacy-respecting, e.g., Plausible Analytics)
 
@@ -26,7 +24,7 @@ Not in V1: Dashboards, AI, multilingual content, user accounts.
 
 Success metric: 500 unique monthly visitors from India within 3 months of launch; zero factual errors in published content (enforced by review process).
 
-V2 — Data Dashboard (Months 5–9)
+V2 — Data Dashboard ✅ COMPLETED
 
 Goal: Add interactive public-health dashboards that make India-specific dementia data accessible and visual.
 
