@@ -3,6 +3,7 @@ import { Nunito, Inter } from 'next/font/google'
 import './globals.css'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 const nunito = Nunito({
   subsets: ['latin'],
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <main id="main-content" className="flex-1">
           {children}
         </main>
+        <Analytics />
         <Footer />
       </body>
     </html>
