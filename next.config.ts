@@ -9,7 +9,8 @@ const withPWA = withPWAInit({
 const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
-  }
+  },
+  turbopack: {}
 }
 
 export default withPWA(nextConfig)
