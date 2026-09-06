@@ -68,7 +68,7 @@ export default function AboutPage() {
             </h2>
             <div className="prose">
               <p>
-                India has an estimated 5.3 million people living with dementia. The number
+                India has an estimated 8.8 million people living with dementia. The number
                 is expected to grow significantly as the population ages: some projections suggest
                 it could double by 2050.
               </p>

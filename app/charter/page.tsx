@@ -18,7 +18,7 @@ export default function CharterPage() {
             Editorial Charter & Methodology
           </h1>
           <p className="text-xl text-text-muted leading-relaxed">
-            Project Lantern is built on a foundation of clinical accuracy, cultural relevance, and strict ethical boundaries. This charter outlines our methodology for serving the 5.3 million Indian families navigating dementia.
+            Project Lantern is built on a foundation of clinical accuracy, cultural relevance, and strict ethical boundaries. This charter outlines our methodology for serving the 8.8 million Indian families navigating dementia.
           </p>
         </div>
 
