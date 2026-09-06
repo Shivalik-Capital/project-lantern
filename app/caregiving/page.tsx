@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Clock, Heart } from 'lucide-react'
+import { ArrowRight, Clock, Heart, ShieldCheck } from 'lucide-react'
 import { DisclaimerBanner } from '@/components/layout/DisclaimerBanner'
 
 export const metadata: Metadata = {
@@ -61,6 +61,12 @@ export default function CaregivingPage() {
                       )}
                       {article.status === 'under-review' && (
                         <span className="tag tag-amber">Under clinical review by SCARF India</span>
+                      )}
+                      {article.status === 'published' && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 border border-green-200 rounded-full font-sans font-700 text-xs tracking-wide uppercase shadow-sm">
+                          <ShieldCheck className="w-3.5 h-3.5" />
+                          Medically Reviewed
+                        </span>
                       )}
                       <span className="flex items-center gap-1 text-xs text-text-subtle ml-auto">
                         <Clock className="w-3 h-3" aria-hidden="true" />
