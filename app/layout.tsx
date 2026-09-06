@@ -18,15 +18,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Project Lantern: Alzheimer\'s Education for Indian Families',
+    default: 'Project Lantern: Alzheimer\'s Care in India',
     template: '%s | Project Lantern',
   },
   description:
-    'Free, trustworthy information about Alzheimer\'s disease and dementia care for Indian families and caregivers. Practical guides, a plain-language glossary and India-specific resources.',
+    'Trustworthy Alzheimer\'s and dementia guides for Indian families. Find medical information, memory clinics, NGOs, and caregiver resources.',
   keywords: [
     'alzheimers india', 'dementia care india', 'caregiver guide', 'memory loss india',
     'ARDSI', 'dementia education', 'alzheimers symptoms hindi',
   ],
+  verification: {
+    google: 'your-google-verification-code',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_IN',
