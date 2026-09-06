@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     'ARDSI', 'dementia education', 'alzheimers symptoms hindi',
   ],
   verification: {
-    google: 'your-google-verification-code',
+    google: 'Rkb2uHGWUxoh6A4TEwyIqIEUPq29-cKfo81xodASgug',
   },
   openGraph: {
     type: 'website',
