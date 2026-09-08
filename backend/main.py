@@ -88,6 +88,40 @@ def get_risk_factors(db: Session = Depends(get_db if not USE_MOCK_DATA else lamb
         res[key] = f.impact_percentage / 100.0
     return res
 
+class PredictRequest(BaseModel):
+    sleep_quality: str
+    appetite: str
+    wandering_incidents: int
+    fall_incidents: int
+    agitation_level: str
+
+@app.post("/api/ml/predict")
+def predict_agitation(req: PredictRequest):
+    try:
+        import joblib
+        import pandas as pd
+        model = joblib.load('model.pkl')
+        
+        sleep_map = {'poor': 0, 'fair': 1, 'good': 2}
+        appetite_map = {'poor': 0, 'fair': 1, 'good': 2}
+        agitation_map = {'none': 0, 'mild': 1, 'moderate': 2, 'severe': 3}
+        
+        input_data = pd.DataFrame([{
+            'sleep_encoded': sleep_map.get(req.sleep_quality, 1),
+            'appetite_encoded': appetite_map.get(req.appetite, 1),
+            'wandering_incidents': req.wandering_incidents,
+            'fall_incidents': req.fall_incidents,
+            'agitation_encoded': agitation_map.get(req.agitation_level, 1)
+        }])
+        
+        prob = model.predict_proba(input_data)[0][1] # Probability of class 1 (High Agitation)
+        return {
+            "prediction_probability": float(prob),
+            "message": f"ML Prediction: {prob*100:.1f}% probability of elevated agitation tomorrow."
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
