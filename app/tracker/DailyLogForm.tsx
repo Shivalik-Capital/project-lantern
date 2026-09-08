@@ -18,14 +18,16 @@ export function DailyLogForm() {
     setError(null)
     setSuccess(false)
 
+    const form = e.currentTarget
+    
     try {
-      const formData = new FormData(e.currentTarget)
+      const formData = new FormData(form)
       await submitDailyLog(formData)
       setSuccess(true)
       // Reset form text area but keep date
-      e.currentTarget.reset()
+      form.reset()
       // Manually set date back to today
-      const dateInput = e.currentTarget.elements.namedItem('log_date') as HTMLInputElement
+      const dateInput = form.elements.namedItem('log_date') as HTMLInputElement
       if (dateInput) dateInput.value = today
     } catch (err: any) {
       setError(err.message)
