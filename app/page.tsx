@@ -464,7 +464,65 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* ─── 9. CTA BAND ─────────────────────────────────────────── */}
+      {/* ─── 9. PWA INSTALL GUIDE ─────────────────────────────────── */}
+      <section style={{ background: '#edede8', borderTop: '1px solid rgba(0,0,0,0.1)' }}>
+        <motion.div
+          className="container-layout"
+          initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }} variants={SV}
+        >
+          <div style={{ padding: '96px 0', borderBottom: '1px solid rgba(0,0,0,0.1)' }}>
+            <motion.div variants={FV} style={{ textAlign: 'center', marginBottom: '64px' }}>
+              <div style={{ ...S.eyebrow, marginBottom: '16px' }}>Offline Access</div>
+              <h2 style={{ color: '#292929', margin: 0 }}>
+                Install the app to your phone.
+              </h2>
+            </motion.div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1px 1fr', gap: '0 64px' }}>
+              
+              {/* iPhone */}
+              <motion.div variants={FV} style={{ paddingRight: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
+                  <div style={{ width: '48px', height: '48px', background: '#141414', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/icon.svg" width={24} height={24} alt="" />
+                  </div>
+                  <div style={{ fontSize: '20px', fontWeight: 500, color: '#292929', letterSpacing: '-0.02em' }}>iPhone</div>
+                </div>
+                <div style={{ ...S.bodySm, color: '#6f6f6e', marginBottom: '16px' }}>
+                  <strong>1.</strong> Open this website in Safari.
+                </div>
+                <div style={{ ...S.bodySm, color: '#6f6f6e' }}>
+                  <strong>2.</strong> Tap the Share button at the bottom, then select <strong>Add to Home Screen</strong>.
+                </div>
+              </motion.div>
+
+              {/* Vertical Rule */}
+              <div style={S.vertRule} />
+
+              {/* Android */}
+              <motion.div variants={FV} style={{ paddingLeft: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
+                  <div style={{ width: '48px', height: '48px', background: '#141414', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/icon.svg" width={24} height={24} alt="" />
+                  </div>
+                  <div style={{ fontSize: '20px', fontWeight: 500, color: '#292929', letterSpacing: '-0.02em' }}>Android</div>
+                </div>
+                <div style={{ ...S.bodySm, color: '#6f6f6e', marginBottom: '16px' }}>
+                  <strong>1.</strong> Open this website in Chrome.
+                </div>
+                <div style={{ ...S.bodySm, color: '#6f6f6e' }}>
+                  <strong>2.</strong> Tap the menu (three dots) at the top right, then select <strong>Install app</strong> or Add to Home screen.
+                </div>
+              </motion.div>
+
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ─── 10. CTA BAND ─────────────────────────────────────────── */}
       <section style={{ background: '#141414', padding: '96px 0' }}>
         <div className="container-layout" style={{ textAlign: 'center' }}>
           <div style={{ ...S.eyebrow, color: '#6f6f6e', marginBottom: '24px' }}>Get started</div>
