@@ -84,14 +84,14 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/icon.svg',  type: 'image/svg+xml' },
-      { url: '/favicon.ico' },
+      { url: '/icon.svg?v=2',  type: 'image/svg+xml' },
+      { url: '/favicon.ico?v=2' },
     ],
     apple: [
-      { url: '/apple-icon.png', sizes: '512x512', type: 'image/png' },
+      { url: '/apple-icon.png?v=2', sizes: '512x512', type: 'image/png' },
     ],
     other: [
-      { rel: 'mask-icon', url: '/icon.svg' },
+      { rel: 'mask-icon', url: '/icon.svg?v=2' },
     ],
   },
   appleWebApp: {
