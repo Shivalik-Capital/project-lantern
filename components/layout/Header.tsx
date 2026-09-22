@@ -1,138 +1,148 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
-import { BookOpen, MapPin, Heart, Users, X, Menu, Search, User } from 'lucide-react'
 import { SearchModal } from '@/components/ui/SearchModal'
-import { createClient } from '@/lib/supabase/client'
-import type { User as SupabaseUser } from '@supabase/supabase-js'
+
+const NAV = [
+  { label: 'Charter',        href: '/charter' },
+  { label: 'Methodology',    href: '/methodology' },
+  { label: 'Clinical Board', href: '/clinical-board' },
+  { label: 'Articles',       href: '/understand' },
+  { label: 'Resources',      href: '/find-help' },
+]
 
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const [user, setUser] = useState<SupabaseUser | null>(null)
-
-  useEffect(() => {
-    const supabase = createClient()
-    
-    // Check active session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null)
-    })
-
-    // Listen for changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null)
-    })
-
-    return () => subscription.unsubscribe()
-  }, [])
-
-  const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen)
+  const [menuOpen,   setMenuOpen]   = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-surface/80 backdrop-blur-md">
-      <div className="container-layout flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
-            <Heart className="w-5 h-5 fill-white" />
-          </div>
-          <span className="font-sans font-800 text-xl tracking-tight text-text group-hover:text-primary transition-colors">
-            Project Lantern
+    <header
+      className="sticky top-0 z-50 w-full"
+      style={{ background: '#edede8', borderBottom: '1px solid rgba(0,0,0,0.09)' }}
+    >
+      <div className="container-layout flex h-[60px] items-center justify-between gap-6">
+
+        {/* Brand */}
+        <Link
+          href="/"
+          onClick={() => setMenuOpen(false)}
+          style={{
+            fontFamily: 'var(--font-sans)',
+            fontWeight: 600,
+            fontSize: '16px',
+            color: '#292929',
+            letterSpacing: '-0.02em',
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            flexShrink: 0,
+          }}
+        >
+          {/* Lantern SVG icon */}
+          <span
+            style={{
+              width: '28px', height: '28px',
+              background: '#141414',
+              borderRadius: '6px',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              flexShrink: 0,
+              overflow: 'hidden',
+            }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icon.svg" alt="" width={28} height={28} style={{ display: 'block' }} />
           </span>
+          Project Lantern
         </Link>
-        <nav className="hidden md:flex items-center gap-6" aria-label="Main Navigation">
-          <Link href="/charter" aria-label="Read our Editorial Charter" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <BookOpen className="w-4 h-4" aria-hidden="true" /> Editorial Charter
-          </Link>
-          <Link href="/glossary" aria-label="Medical Glossary" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <BookOpen className="w-4 h-4" aria-hidden="true" /> Glossary
-          </Link>
-          <Link href="/methodology" aria-label="View our Methodology and Data Sourcing" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <BookOpen className="w-4 h-4" aria-hidden="true" /> Methodology
-          </Link>
-          <Link href="/dashboard" aria-label="View Public Health Dashboard" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <BookOpen className="w-4 h-4" aria-hidden="true" /> Data Dashboard
-          </Link>
-          <Link href="/clinical-board" aria-label="Learn about our Clinical Board" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Users className="w-4 h-4" aria-hidden="true" /> Clinical Board
-          </Link>
-          <Link href="/understand" aria-label="Read Articles" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <Heart className="w-4 h-4" aria-hidden="true" /> Articles
-          </Link>
-          <Link href="/find-help" aria-label="Find Resources and Help" className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5">
-            <MapPin className="w-4 h-4" aria-hidden="true" /> Resources
-          </Link>
-          <div className="flex items-center gap-4 border-l border-border pl-6 ml-2">
-            <button 
-              onClick={() => setIsSearchOpen(true)}
-              aria-label="Search" 
-              className="text-sm font-600 text-text-muted hover:text-primary transition-colors flex items-center gap-1.5"
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-7 flex-1 justify-center" aria-label="Main navigation">
+          {NAV.map(n => (
+            <Link
+              key={n.href}
+              href={n.href}
+              style={{
+                fontFamily: 'var(--font-sans)',
+                fontSize: '14px',
+                fontWeight: 400,
+                color: '#6f6f6e',
+                textDecoration: 'none',
+                letterSpacing: '-0.01em',
+              }}
             >
-              <Search className="w-5 h-5" aria-hidden="true" />
-            </button>
-            
-            {user ? (
-              <Link href="/tracker" className="btn btn-primary !min-h-9 !px-4 !py-1.5 !text-xs">
-                <User className="w-3.5 h-3.5" /> Daily Log
-              </Link>
-            ) : (
-              <Link href="/login" className="btn btn-outline !min-h-9 !px-4 !py-1.5 !text-xs">
-                Sign In
-              </Link>
-            )}
-          </div>
+              {n.label}
+            </Link>
+          ))}
         </nav>
-        <div className="md:hidden flex items-center gap-2">
-          <button 
-            onClick={() => setIsSearchOpen(true)}
-            aria-label="Search" 
-            className="p-2 text-text-muted hover:text-primary"
+
+        {/* Right */}
+        <div className="hidden md:flex items-center gap-4 shrink-0">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search"
+            style={{
+              background: 'none', border: 'none', cursor: 'pointer',
+              fontFamily: 'var(--font-sans)', fontSize: '14px',
+              color: '#6f6f6e', padding: '4px',
+            }}
           >
-            <Search className="w-5 h-5" aria-hidden="true" />
+            Search
           </button>
-          <button 
-            aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"} 
-            className="p-2 text-text-muted hover:text-primary"
-            onClick={toggleMenu}
+          <Link href="/tracker" className="btn btn-primary" style={{ height: '38px', padding: '0 20px', fontSize: '14px' }}>
+            Symptom Log
+          </Link>
+        </div>
+
+        {/* Mobile toggle — text, no icon */}
+        <div className="md:hidden flex items-center gap-4 ml-auto">
+          <button
+            onClick={() => setSearchOpen(true)}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#6f6f6e', fontFamily: 'var(--font-sans)' }}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            Search
+          </button>
+          <button
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMenuOpen(v => !v)}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#292929', fontFamily: 'var(--font-sans)', fontWeight: 500 }}
+          >
+            {menuOpen ? 'Close' : 'Menu'}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-surface px-4 py-4 space-y-4 shadow-lg absolute w-full left-0">
-          <Link href="/charter" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-primary" /> Editorial Charter
-          </Link>
-          <Link href="/methodology" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-primary" /> Methodology
-          </Link>
-          <Link href="/clinical-board" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-            <Users className="w-5 h-5 text-primary" /> Clinical Board
-          </Link>
-          <Link href="/understand" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-            <Heart className="w-5 h-5 text-primary" /> Articles
-          </Link>
-          <Link href="/find-help" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-primary" /> Resources
-          </Link>
-          <hr className="border-border" />
-          {user ? (
-            <Link href="/tracker" onClick={toggleMenu} className="block text-base font-600 text-primary hover:text-primary-dark flex items-center gap-2">
-              <User className="w-5 h-5" /> Daily Log
+      {/* Mobile drawer */}
+      {menuOpen && (
+        <div
+          className="md:hidden absolute top-[60px] left-0 w-full z-40 px-6 py-8"
+          style={{ background: '#edede8', borderBottom: '1px solid rgba(0,0,0,0.09)' }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            {NAV.map(n => (
+              <Link
+                key={n.href}
+                href={n.href}
+                onClick={() => setMenuOpen(false)}
+                style={{ fontSize: '17px', color: '#292929', textDecoration: 'none', fontFamily: 'var(--font-sans)' }}
+              >
+                {n.label}
+              </Link>
+            ))}
+            <Link
+              href="/tracker"
+              onClick={() => setMenuOpen(false)}
+              className="btn btn-primary"
+              style={{ width: '100%', justifyContent: 'center', marginTop: '8px' }}
+            >
+              Symptom Log
             </Link>
-          ) : (
-            <Link href="/login" onClick={toggleMenu} className="block text-base font-600 text-text hover:text-primary flex items-center gap-2">
-              <User className="w-5 h-5 text-primary" /> Sign In
-            </Link>
-          )}
+          </div>
         </div>
       )}
 
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   )
 }

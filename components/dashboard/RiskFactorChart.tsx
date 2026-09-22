@@ -61,7 +61,7 @@ export function RiskFactorChart() {
             <Tooltip 
               cursor={{fill: 'rgba(74, 124, 111, 0.05)'}}
               contentStyle={{ borderRadius: '10px', border: '1px solid #eef2f0', boxShadow: '0 4px 20px 0 rgb(74 124 111 / 0.14)' }}
-              formatter={(value: number) => [`${value}%`, 'Attributable Risk']}
+              formatter={(value: any) => [`${value}%`, 'Attributable Risk']}
             />
             <Bar dataKey="impact" radius={[0, 4, 4, 0]}>
               {data.map((entry, index) => (

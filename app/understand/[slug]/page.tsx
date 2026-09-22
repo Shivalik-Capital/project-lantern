@@ -14,16 +14,15 @@ export async function generateStaticParams() {
     .map((a) => ({ slug: a.slug }))
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Metadata {
-  return params.then((resolvedParams) => {
-    const article = articles.find((a) => a.slug === resolvedParams.slug)
-    if (!article) return {}
-    
-    return {
-      title: article.title,
-      description: article.description,
-    }
-  })
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params
+  const article = articles.find((a) => a.slug === resolvedParams.slug)
+  if (!article) return {}
+  
+  return {
+    title: article.title,
+    description: article.description,
+  }
 }
 
 export default async function UnderstandArticlePage({ params }: { params: Promise<{ slug: string }> }) {

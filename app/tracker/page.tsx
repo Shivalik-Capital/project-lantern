@@ -1,43 +1,15 @@
-import { createClient } from '@/lib/supabase/server'
-import { redirect } from 'next/navigation'
-import { LogOut } from 'lucide-react'
-import { TrackerDashboard } from './TrackerDashboard'
+import { TrackerApp } from './TrackerApp'
 
 export const metadata = {
-  title: 'Daily Symptom Tracker | Project Lantern',
+  title: 'Caregiver Symptom Log | Project Lantern',
+  description: 'A private, on-device symptom tracker for Alzheimer\'s and dementia caregivers. Export PDF summaries for doctor visits.'
 }
 
-export default async function TrackerPage() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-
-  if (!user) {
-    redirect('/login')
-  }
-
-  // Fetch recent logs (30 days for analysis)
-  const { data: logs } = await supabase
-    .from('daily_logs')
-    .select('*')
-    .order('log_date', { ascending: false })
-    .limit(30)
-
+export default function TrackerPage() {
   return (
-    <div className="container-layout py-12">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-sans font-800 text-text">Dashboard</h1>
-            <p className="text-text-muted mt-1 text-sm">Signed in as: {user.email}</p>
-          </div>
-          <form action="/auth/signout" method="post">
-            <button className="btn btn-outline !text-xs !py-1 !px-3" type="submit">
-              <LogOut className="w-3.5 h-3.5" /> Sign Out
-            </button>
-          </form>
-        </div>
-
-        <TrackerDashboard logs={logs || []} />
+    <div className="container-layout py-16 md:py-24">
+      <div className="max-w-3xl mx-auto">
+        <TrackerApp />
       </div>
     </div>
   )

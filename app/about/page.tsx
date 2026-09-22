@@ -1,227 +1,140 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Flame, ArrowRight, Shield, Heart, BookOpen } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Our Story',
-  description:
-    'About Project Lantern: why it exists, what it is, what it is not and how we approach the responsibility of publishing health information.',
+  description: 'About Project Lantern: why it exists, what it is, what it is not.',
 }
 
-const PRINCIPLES = [
-  {
-    icon: Shield,
-    title: 'Educational only. Always.',
-    description:
-      'Every page on this platform is educational. We do not tell you whether you or a family member has dementia. We do not recommend specific treatments. Every article directs you to qualified healthcare professionals.',
-  },
-  {
-    icon: BookOpen,
-    title: 'Sourced and transparent',
-    description:
-      'Every factual claim traces to a named, reputable source. Sources are listed at the bottom of every article. If something is uncertain or contested, we say so.',
-  },
-  {
-    icon: Heart,
-    title: 'India-appropriate',
-    description:
-      'Resources, context and examples reflect the Indian experience: our healthcare system, our family structures, our helplines. Content written for Western contexts can be alienating and practically useless.',
-  },
-]
-
 const ROADMAP = [
-  { version: 'V1', label: 'Educational Foundation', description: 'Articles, glossary, resource directory', status: 'current' },
-  { version: 'V2', label: 'Data & Research', description: 'Indian dementia statistics and dashboards', status: 'planned' },
-  { version: 'V3', label: 'Hindi content & AI Q&A', description: 'Multilingual support and assisted search', status: 'planned' },
-  { version: 'V4', label: 'Community', description: 'Caregiver stories and connection', status: 'planned' },
-  { version: 'V5', label: 'Research Tools', description: 'Data tools for researchers and advocates', status: 'planned' },
+  { v: 'V1', label: 'Educational Foundation', desc: 'Articles, glossary, resource directory', live: true },
+  { v: 'V2', label: 'Data & Symptom Tracking', desc: 'Indian dementia statistics and caregiver logs', live: true },
+  { v: 'V3', label: 'Hindi Content', desc: 'Multilingual support and assisted search', live: false },
+  { v: 'V4', label: 'Community', desc: 'Caregiver stories and peer connection', live: false },
 ]
 
 export default function AboutPage() {
   return (
-    <>
+    <div style={{ background: '#edede8' }}>
+
       {/* Hero */}
-      <section className="page-hero" aria-labelledby="about-heading">
+      <section className="w-full pt-[96px] pb-[80px]">
         <div className="container-layout">
-          <div className="content-column">
-            <div className="flex items-center gap-2.5 mb-5">
-              <Flame className="w-8 h-8 text-amber" aria-hidden="true" strokeWidth={1.6} />
-              <span className="font-sans font-800 text-primary text-2xl">Project Lantern</span>
-            </div>
-            <h1 id="about-heading" className="font-sans font-800 text-text mb-4">
-              Our Story
-            </h1>
-            <p className="text-lg text-text-muted leading-relaxed">
-              Why this platform exists, what it is and the principles behind every decision we make.
+          <p style={{ fontSize: '12px', fontWeight: 600, color: '#8f8f8e', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
+            About us
+          </p>
+          <h1 style={{ maxWidth: '700px', marginBottom: '24px' }}>
+            A clear, localized guide to Alzheimer's in India.
+          </h1>
+          <p style={{ fontSize: '23px', color: '#6f6f6e', lineHeight: 1.35, letterSpacing: '-0.23px', maxWidth: '560px' }}>
+            Project Lantern exists to close the information gap for families navigating a dementia diagnosis.
+          </p>
+        </div>
+      </section>
+
+      {/* The gap */}
+      <section className="w-full py-[80px]" style={{ background: '#ffffff' }}>
+        <div className="container-layout max-w-[760px]">
+          <p style={{ fontSize: '12px', fontWeight: 600, color: '#8f8f8e', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
+            The crisis
+          </p>
+          <h2 style={{ fontSize: '32px', fontWeight: 400, letterSpacing: '-0.32px', color: '#292929', marginBottom: '32px' }}>
+            The information gap
+          </h2>
+          <div className="prose">
+            <p>
+              India has an estimated 8.8 million people living with dementia — and the number is projected to double by 2050. Yet the available information is almost entirely written for Western audiences.
+            </p>
+            <p>
+              What does "contact your GP" mean where the first contact might be a physician who has seen two dementia patients in their career? What does "care home" mean in a culture where institutional care carries significant stigma and the expectation is that families care for their own?
+            </p>
+            <p>
+              Project Lantern is an addition to the work done by ARDSI and the Dementia India Alliance — a free, open, plainly written resource built specifically for Indian families.
             </p>
           </div>
         </div>
       </section>
 
-      <div className="container-layout py-10 md:py-16">
-        <div className="content-column space-y-14">
-
-          {/* Why this exists */}
-          <section aria-labelledby="why-heading">
-            <h2 id="why-heading" className="font-sans font-700 text-text text-2xl mb-5">
-              The information gap
-            </h2>
-            <div className="prose">
-              <p>
-                India has an estimated 8.8 million people living with dementia. The number
-                is expected to grow significantly as the population ages: some projections suggest
-                it could double by 2050.
-              </p>
-              <p>
-                Yet the available information is largely written for Western audiences. What does
-                "contact your GP" mean in a country where the first point of contact might be a
-                general physician who has seen two dementia patients in their career? What does
-                "care home" mean in a culture where institutional care carries significant stigma
-                and the expectation is that families care for their own?
-              </p>
-              <p>
-                Project Lantern is an attempt to close part of that gap. It is not a substitute for
-                the excellent work done by ARDSI, the Dementia India Alliance and other organisations.
-                It is an addition: a free, open, plainly written resource built specifically for
-                Indian families navigating a dementia journey.
-              </p>
-            </div>
-          </section>
-
-          {/* Principles */}
-          <section aria-labelledby="principles-heading">
-            <h2 id="principles-heading" className="font-sans font-700 text-text text-2xl mb-6">
-              How we approach this responsibility
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-              {PRINCIPLES.map((p) => {
-                const Icon = p.icon
-                return (
-                  <div key={p.title} className="card p-6">
-                    <div className="w-10 h-10 rounded-xl bg-primary-light flex items-center justify-center mb-4">
-                      <Icon className="w-5 h-5 text-primary" aria-hidden="true" strokeWidth={1.8} />
-                    </div>
-                    <h3 className="font-sans font-700 text-text mb-2">{p.title}</h3>
-                    <p className="text-sm text-text-muted leading-relaxed">{p.description}</p>
-                  </div>
-                )
-              })}
-            </div>
-          </section>
-
-          {/* What it's not */}
-          <section aria-labelledby="not-heading">
-            <h2 id="not-heading" className="font-sans font-700 text-text text-2xl mb-5">
-              What this platform is not
-            </h2>
-            <div className="prose">
-              <ul>
-                <li>
-                  <strong>Not a diagnostic tool.</strong> We will never build a symptom checker
-                  that suggests whether you or a family member has dementia. The potential for
-                  harm is too significant. All diagnostic questions should be directed to a
-                  qualified doctor, neurologist or geriatrician.
-                </li>
-                <li>
-                  <strong>Not a treatment guide.</strong> We do not recommend specific medications
-                  or therapies. We describe what is generally known about treatments in educational
-                  terms, with citations and we defer specific decisions to medical professionals.
-                </li>
-                <li>
-                  <strong>Not affiliated with any pharmaceutical company.</strong> There are no
-                  sponsored articles, no affiliate links, no advertising of any kind.
-                </li>
-                <li>
-                  <strong>Not a finished product.</strong> All V1 articles are draft: they have
-                  not yet been reviewed by a medical professional. We are actively seeking a
-                  medical reviewer. Until content is reviewed, it is clearly marked as draft.
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          {/* Medical review */}
-          <section className="card p-8 bg-primary-lighter border-primary-light" aria-labelledby="review-heading">
-            <h2 id="review-heading" className="font-sans font-700 text-text text-xl mb-3">
-              Medical review
-            </h2>
-            <p className="text-text-muted leading-relaxed mb-4">
-              Our V1 foundational articles are currently <span className="tag tag-amber">under clinical review</span> by the incredible medical team at <strong>SCARF Chennai (Schizophrenia Research Foundation)</strong>. 
-            </p>
-            <p className="text-text-muted leading-relaxed mb-5">
-              Before any article exits this review phase, it is read and approved by a named, credentialed medical professional to ensure absolute clinical accuracy. We do not publish unverified medical claims.
-            </p>
-            <Link href="mailto:sorendatta7@gmail.com" className="btn btn-primary inline-flex">
-              Get in touch
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
-          </section>
-
-          {/* Roadmap */}
-          <section aria-labelledby="roadmap-heading">
-            <h2 id="roadmap-heading" className="font-sans font-700 text-text text-2xl mb-6">
-              Where this is going
-            </h2>
-            <ol className="space-y-3" role="list">
-              {ROADMAP.map((item) => (
-                <li
-                  key={item.version}
-                  className={`flex items-start gap-4 p-4 rounded-xl border ${
-                    item.status === 'current'
-                      ? 'border-primary bg-primary-lighter'
-                      : 'border-border bg-surface'
-                  }`}
-                >
-                  <div className={`
-                    flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center
-                    font-sans font-700 text-xs
-                    ${item.status === 'current' ? 'bg-primary text-white' : 'bg-background text-text-muted border border-border'}
-                  `}>
-                    {item.version}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className="font-sans font-700 text-text text-sm">{item.label}</span>
-                      {item.status === 'current' && (
-                        <span className="tag text-xs">Current</span>
-                      )}
-                    </div>
-                    <p className="text-xs text-text-muted mt-0.5">{item.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </section>
-
-          {/* Open source */}
-          <section aria-labelledby="open-source-heading">
-            <h2 id="open-source-heading" className="font-sans font-700 text-text text-2xl mb-4">
-              Open source
-            </h2>
-            <p className="text-text-muted leading-relaxed mb-5">
-              The code for this platform is open source (MIT licence). The content is published
-              under Creative Commons Attribution 4.0 (CC BY 4.0). This is intentional: if this
-              work is useful, it should be freely reusable. If you want to contribute, see the
-              contributing guide on GitHub.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline text-sm"
-              >
-                View on GitHub
-                <span className="sr-only">(opens in new tab)</span>
-              </a>
-              <Link href="/understand" className="btn btn-primary text-sm">
-                Start reading
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </Link>
-            </div>
-          </section>
+      {/* What it's not */}
+      <section className="w-full py-[80px]" style={{ background: '#edede8' }}>
+        <div className="container-layout max-w-[760px]">
+          <p style={{ fontSize: '12px', fontWeight: 600, color: '#8f8f8e', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
+            Boundaries
+          </p>
+          <h2 style={{ fontSize: '32px', fontWeight: 400, letterSpacing: '-0.32px', color: '#292929', marginBottom: '36px' }}>
+            What this platform is not
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              { title: 'Not a diagnostic tool', body: 'We will never build a symptom checker that suggests whether you or a family member has dementia. All diagnostic questions go to a qualified doctor.' },
+              { title: 'Not a treatment guide', body: 'We describe treatments in educational terms with citations, and defer all specific decisions to medical professionals.' },
+              { title: 'Not commercially influenced', body: 'No sponsored articles, no affiliate links, no advertising. Entirely independent.' },
+            ].map((item) => (
+              <div key={item.title} className="card" style={{ padding: '28px 24px' }}>
+                <h3 style={{ fontSize: '17px', fontWeight: 500, color: '#292929', marginBottom: '10px', letterSpacing: '-0.17px' }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: '15px', color: '#6f6f6e', lineHeight: 1.6 }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* Roadmap */}
+      <section className="w-full py-[80px]" style={{ background: '#ffffff' }}>
+        <div className="container-layout max-w-[760px]">
+          <p style={{ fontSize: '12px', fontWeight: 600, color: '#8f8f8e', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '16px' }}>
+            Roadmap
+          </p>
+          <h2 style={{ fontSize: '32px', fontWeight: 400, letterSpacing: '-0.32px', color: '#292929', marginBottom: '36px' }}>
+            Where this is going
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+            {ROADMAP.map((item, i) => (
+              <div
+                key={item.v}
+                className="flex items-start gap-6 py-6"
+                style={{ borderBottom: i < ROADMAP.length - 1 ? '1px solid rgba(0,0,0,0.08)' : 'none', opacity: item.live ? 1 : 0.45 }}
+              >
+                <div className="w-10 shrink-0">
+                  <span style={{ fontSize: '12px', fontWeight: 600, color: '#8f8f8e' }}>{item.v}</span>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-1">
+                    <h3 style={{ fontSize: '18px', fontWeight: 500, color: '#292929', margin: 0 }}>{item.label}</h3>
+                    {item.live && (
+                      <span className="flex items-center gap-1.5 px-2 py-0.5 rounded-full" style={{ background: '#dbdbd2', fontSize: '12px', color: '#6f6f6e' }}>
+                        <span className="status-dot" style={{ width: '6px', height: '6px' }}></span>
+                        Live
+                      </span>
+                    )}
+                  </div>
+                  <p style={{ fontSize: '16px', color: '#6f6f6e', margin: 0 }}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical CTA */}
+      <section className="w-full py-[80px]" style={{ background: '#edede8' }}>
+        <div className="container-layout flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+          <div>
+            <h2 style={{ fontSize: '32px', fontWeight: 400, letterSpacing: '-0.32px', color: '#292929', marginBottom: '8px' }}>
+              Meet the Clinical Board
+            </h2>
+            <p style={{ fontSize: '16px', color: '#6f6f6e' }}>
+              The SCARF Chennai doctors who reviewed our foundational content.
+            </p>
+          </div>
+          <Link href="/clinical-board" className="btn btn-primary shrink-0">
+            View board <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
+    </div>
   )
 }
