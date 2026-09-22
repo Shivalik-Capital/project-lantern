@@ -150,15 +150,16 @@ export default function HomePage() {
           className="container-layout"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-60px' }} variants={SV}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridTemplateRows: 'repeat(2, 1fr)' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2">
             {STATS.map((s, i) => (
               <motion.div
                 key={s.value}
                 variants={FV}
+                className={`p-8 md:p-14 border-b border-[rgba(0,0,0,0.1)] ${i % 2 === 0 ? 'sm:border-r' : ''} ${i >= 2 ? 'sm:border-b-0' : ''}`}
                 style={{
-                  padding: '56px 48px',
-                  borderRight:  (i % 2 === 0) ? '1px solid rgba(0,0,0,0.1)' : 'none',
-                  borderBottom: (i < 2)        ? '1px solid rgba(0,0,0,0.1)' : 'none',
+                  
+                  
+                  
                 }}
               >
                 <div style={{
@@ -185,7 +186,7 @@ export default function HomePage() {
           className="container-layout"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={SV}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1px 1fr', gap: '0 64px', alignItems: 'start' }}>
+          <div className="flex flex-col md:grid md:grid-cols-[1fr_1px_1fr] gap-12 md:gap-16 items-start">
             {/* Left: editorial statement */}
             <motion.div variants={FV}>
               <div style={{ ...S.eyebrow, color: '#6f6f6e', marginBottom: '28px' }}>The problem</div>
@@ -203,7 +204,7 @@ export default function HomePage() {
             </motion.div>
 
             {/* Vertical rule */}
-            <div style={S.vertRule} />
+            <div className="hidden md:block" style={S.vertRule} /><hr className="md:hidden" style={{ border: 'none', borderTop: '1px solid rgba(255,255,255,0.15)', margin: '0' }} />
 
             {/* Right: prose */}
             <motion.div variants={FV} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
@@ -267,7 +268,7 @@ export default function HomePage() {
           {/* Text */}
           <motion.div
             variants={FV}
-            style={{ padding: '72px 64px 72px 0', display: 'flex', flexDirection: 'column', justifyContent: 'center', borderRight: '1px solid rgba(0,0,0,0.1)' }}
+            className="py-12 md:py-[72px] md:pr-[64px] flex flex-col justify-center border-b md:border-b-0 md:border-r border-[rgba(0,0,0,0.1)]"
           >
             <div style={{ ...S.eyebrow, marginBottom: '16px' }}>Data</div>
             <h2 style={{ color: '#292929', marginBottom: '24px' }}>
@@ -420,7 +421,7 @@ export default function HomePage() {
               {/* BP section */}
               <div style={{ marginBottom: '8px' }}>
                 <div style={{ ...S.caption, color: '#8f8f8e', marginBottom: '12px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.07em' }}>Blood Pressure</div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px' }}>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   {[
                     { l: 'Systolic', v: '128' },
                     { l: 'Diastolic', v: '82' },
@@ -478,7 +479,7 @@ export default function HomePage() {
               </h2>
             </motion.div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1px 1fr', gap: '0 64px' }}>
+            <div className="flex flex-col md:grid md:grid-cols-[1fr_1px_1fr] gap-12 md:gap-16">
               
               {/* iPhone */}
               <motion.div variants={FV} style={{ paddingRight: '16px' }}>
@@ -498,7 +499,7 @@ export default function HomePage() {
               </motion.div>
 
               {/* Vertical Rule */}
-              <div style={S.vertRule} />
+              <div className="hidden md:block" style={S.vertRule} /><hr className="md:hidden" style={{ border: 'none', borderTop: '1px solid rgba(0,0,0,0.1)', margin: '0' }} />
 
               {/* Android */}
               <motion.div variants={FV} style={{ paddingLeft: '16px' }}>
