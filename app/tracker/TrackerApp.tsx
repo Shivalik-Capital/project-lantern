@@ -74,7 +74,7 @@ const S = {
 // ── Rating Row ────────────────────────────────────────────────
 function RatingRow({ label, value, onChange }: { label: string; value: number | null; onChange: (v: number) => void }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0' }}>
+    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 py-3.5">
       <span style={S.label}>{label}</span>
       <div style={{ display: 'flex', gap: '6px' }}>
         {[1, 2, 3, 4, 5].map(n => (
@@ -82,14 +82,14 @@ function RatingRow({ label, value, onChange }: { label: string; value: number | 
             key={n}
             onClick={() => onChange(value === n ? 0 : n)}
             style={{
-              width: '36px',
-              height: '36px',
+              width: '40px',
+              height: '40px',
               borderRadius: '6px',
               border: 'none',
               background: value !== null && n <= value ? '#141414' : '#dbdbd2',
               color: value !== null && n <= value ? '#edede8' : '#8f8f8e',
               fontFamily: 'var(--font-sans)',
-              fontSize: '14px',
+              fontSize: '15px',
               fontWeight: 500,
               cursor: 'pointer',
               display: 'flex',
@@ -207,6 +207,33 @@ export function TrackerApp() {
     }
   }
 
+  const setReminder = () => {
+    // Generate an ICS file for a daily recurring event
+    const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Project Lantern//Tracker//EN
+BEGIN:VEVENT
+SUMMARY:Log Symptoms (Project Lantern)
+DESCRIPTION:Time to log your daily symptoms and blood pressure in the Project Lantern tracker.\\n\\nOpen tracker: https://project-lantern-teal.vercel.app/tracker
+RRULE:FREQ=DAILY
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Log Symptoms (Project Lantern)
+TRIGGER:-PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR`
+
+    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.setAttribute('download', 'lantern-daily-reminder.ics')
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   if (!isClient) return null
 
   const today = format(new Date(), 'EEEE, d MMMM')
@@ -216,14 +243,16 @@ export function TrackerApp() {
       <div style={{ maxWidth: '760px', marginInline: 'auto', padding: '0 24px 96px' }}>
 
         {/* ── Page Header ─────────────────────────────────── */}
-        <div style={{ padding: '48px 0 40px', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
+        <div style={{ padding: '48px 0 40px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div>
             <div style={{ ...S.eyebrow, marginBottom: '10px' }}>Daily Tracker</div>
             <h1 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 400, letterSpacing: '-0.03em', color: '#292929', lineHeight: 1.1 }}>
               {today}
             </h1>
           </div>
-          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
+          
+          {/* Controls */}
+          <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
             {/* Tab switcher */}
             <div style={{ display: 'flex', background: '#dbdbd2', borderRadius: '200px', padding: '4px' }}>
               {(['log', 'history'] as const).map(v => (
@@ -247,11 +276,17 @@ export function TrackerApp() {
                 </button>
               ))}
             </div>
-            {view === 'history' && logs.length > 0 && (
-              <button onClick={exportPDF} className="btn btn-primary" style={{ height: '40px', padding: '0 20px', fontSize: '14px' }}>
-                Export PDF
+            
+            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+              <button onClick={setReminder} className="btn" style={{ background: '#dbdbd2', color: '#141414', border: '1px solid rgba(0,0,0,0.1)', height: '40px', padding: '0 20px', fontSize: '14px' }}>
+                Set Reminder
               </button>
-            )}
+              {view === 'history' && logs.length > 0 && (
+                <button onClick={exportPDF} className="btn btn-primary" style={{ height: '40px', padding: '0 20px', fontSize: '14px' }}>
+                  Export PDF
+                </button>
+              )}
+            </div>
           </div>
         </div>
 
@@ -309,7 +344,7 @@ export function TrackerApp() {
             {/* Blood Pressure card */}
             <div style={{ background: '#ffffff', borderRadius: '8px', border: '1px solid rgba(0,0,0,0.07)', padding: '28px' }}>
               <div style={{ ...S.eyebrow, marginBottom: '16px' }}>Blood Pressure</div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {[
                   { label: 'Systolic',  value: bpUpper,   set: setBpUpper,   placeholder: '120' },
                   { label: 'Diastolic', value: bpLower,   set: setBpLower,   placeholder: '80' },
