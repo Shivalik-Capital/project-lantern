@@ -494,7 +494,10 @@ export default function HomePage() {
                   <strong>1.</strong> Open this website in Safari.
                 </div>
                 <div style={{ ...S.bodySm, color: '#6f6f6e' }}>
-                  <strong>2.</strong> Tap the Share button at the bottom, then select <strong>Add to Home Screen</strong>.
+                  <strong>2.</strong> Tap the Share button at the bottom.
+                </div>
+                <div style={{ ...S.bodySm, color: '#6f6f6e', marginTop: '16px' }}>
+                  <strong>3.</strong> Tap the three dots and select <strong>Add to Home Screen</strong>.
                 </div>
               </motion.div>
 
