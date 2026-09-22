@@ -1,5 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
-  <rect width="256" height="256" fill="#4a7c6f" rx="64" />
-  <path d="M128 40C100 40 76 60 76 88C76 110 92 128 108 136V184C108 196 118 208 128 208C138 208 148 196 148 184V136C164 128 180 110 180 88C180 60 156 40 128 40Z" fill="#c4793a" />
-  <circle cx="128" cy="88" r="24" fill="#ffffff" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#141414"/>
+  <!-- Lantern base plate -->
+  <rect x="188" y="420" width="136" height="18" rx="6" fill="#edede8"/>
+  <!-- Lantern fuel reservoir -->
+  <rect x="210" y="395" width="92" height="28" rx="5" fill="#edede8"/>
+  <!-- Lantern body outline (glass enclosure) -->
+  <path d="M176 240 C176 200 210 180 256 180 C302 180 336 200 336 240 L336 370 C336 390 302 400 256 400 C210 400 176 390 176 370 Z" fill="none" stroke="#edede8" stroke-width="14"/>
+  <!-- Lantern frame bars -->
+  <line x1="256" y1="180" x2="256" y2="400" stroke="#edede8" stroke-width="8"/>
+  <line x1="176" y1="290" x2="336" y2="290" stroke="#edede8" stroke-width="8"/>
+  <!-- Lantern top collar -->
+  <rect x="210" y="160" width="92" height="22" rx="4" fill="#edede8"/>
+  <!-- Lantern chimney -->
+  <rect x="236" y="110" width="40" height="52" rx="4" fill="#edede8"/>
+  <!-- Handle loop -->
+  <path d="M256 110 C256 80 280 70 280 90" fill="none" stroke="#edede8" stroke-width="10" stroke-linecap="round"/>
+  <!-- Flame -->
+  <path d="M256 340 C248 325 244 310 252 295 C256 285 260 295 264 285 C268 300 262 315 256 340Z" fill="#e97451"/>
 </svg>
