@@ -209,10 +209,8 @@ export function TrackerApp() {
   }
 
   const handleAppleReminder = () => {
-    const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Project Lantern//Tracker//EN\nBEGIN:VEVENT\nSUMMARY:Log Symptoms (Project Lantern)\nDESCRIPTION:Time to log your daily symptoms and blood pressure in the Project Lantern tracker.\\n\\nOpen tracker: https://project-lantern-teal.vercel.app/tracker\nRRULE:FREQ=DAILY\nBEGIN:VALARM\nACTION:DISPLAY\nDESCRIPTION:Log Symptoms (Project Lantern)\nTRIGGER:-PT0M\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR`
-    
-    // Direct navigation to data URI forces iOS Safari to open Calendar app
-    window.location.assign('data:text/calendar;charset=utf8,' + encodeURIComponent(icsContent))
+    // Navigating to a real hosted .ics file correctly triggers the iOS Calendar app
+    window.location.href = '/reminder.ics'
     setShowReminderMenu(false)
   }
 

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Project Lantern//Tracker//EN
+BEGIN:VEVENT
+SUMMARY:Log Symptoms (Project Lantern)
+DESCRIPTION:Time to log your daily symptoms and blood pressure in the Project Lantern tracker.\n\nOpen tracker: https://project-lantern-teal.vercel.app/tracker
+RRULE:FREQ=DAILY
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Log Symptoms (Project Lantern)
+TRIGGER:-PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
