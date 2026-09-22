@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 import Dexie, { type Table } from 'dexie'
 import { format, subDays } from 'date-fns'
-import jsPDF from 'jspdf'
-import 'jspdf-autotable'
+import { jsPDF } from 'jspdf'
+import autoTable from 'jspdf-autotable'
 
 // ── DB Schema ────────────────────────────────────────────────
 interface LogEntry {
@@ -157,30 +157,54 @@ export function TrackerApp() {
     loadLogs()
   }
 
-  const exportPDF = () => {
-    const doc = new jsPDF()
-    const recent = logs.slice(0, 42)
-    doc.setFontSize(18)
-    doc.text('Project Lantern — Doctor Visit Log', 14, 20)
-    doc.setFontSize(10)
-    doc.text(`Exported: ${format(new Date(), 'dd MMM yyyy, h:mm a')}`, 14, 28)
-    ;(doc as any).autoTable({
-      startY: 34,
-      head: [['Date & Time', 'Memory', 'Sleep', 'Agitation', 'Appetite', 'BP (Sys/Dia)', 'Pulse', 'Notes']],
-      body: recent.map(l => [
-        format(new Date(l.timestamp), 'dd MMM yy, h:mm a'),
-        l.memory    ? `${l.memory}/5`  : '-',
-        l.sleep     ? `${l.sleep}/5`   : '-',
-        l.agitation ? `${l.agitation}/5` : '-',
-        l.appetite  ? `${l.appetite}/5`  : '-',
-        l.bp_upper && l.bp_lower ? `${l.bp_upper} / ${l.bp_lower}` : '-',
-        l.pulse     ? String(l.pulse)  : '-',
-        l.notes || '-',
-      ]),
-      styles: { fontSize: 8, cellPadding: 3 },
-      headStyles: { fillColor: [20, 20, 20] },
-    })
-    doc.save('lantern-doctor-visit-log.pdf')
+  const exportPDF = async () => {
+    try {
+      const doc = new jsPDF()
+      const recent = logs.slice(0, 42)
+      doc.setFontSize(18)
+      doc.text('Project Lantern — Doctor Visit Log', 14, 20)
+      doc.setFontSize(10)
+      doc.text(`Exported: ${format(new Date(), 'dd MMM yyyy, h:mm a')}`, 14, 28)
+      
+      autoTable(doc, {
+        startY: 34,
+        head: [['Date & Time', 'Memory', 'Sleep', 'Agitation', 'Appetite', 'BP (Sys/Dia)', 'Pulse', 'Notes']],
+        body: recent.map(l => [
+          format(new Date(l.timestamp), 'dd MMM yy, h:mm a'),
+          l.memory    ? `${l.memory}/5`  : '-',
+          l.sleep     ? `${l.sleep}/5`   : '-',
+          l.agitation ? `${l.agitation}/5` : '-',
+          l.appetite  ? `${l.appetite}/5`  : '-',
+          l.bp_upper && l.bp_lower ? `${l.bp_upper} / ${l.bp_lower}` : '-',
+          l.pulse     ? String(l.pulse)  : '-',
+          l.notes || '-',
+        ]),
+        styles: { fontSize: 8, cellPadding: 3 },
+        headStyles: { fillColor: [20, 20, 20] },
+      })
+      
+      const filename = `lantern-log-${format(new Date(), 'dd-MMM-yyyy')}.pdf`
+
+      // Mobile friendly share via Web Share API
+      if (navigator.canShare && navigator.share) {
+        const pdfBlob = doc.output('blob')
+        const file = new File([pdfBlob], filename, { type: 'application/pdf' })
+        if (navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            files: [file],
+            title: 'Doctor Visit Log',
+            text: 'Project Lantern symptom log for doctor visit.',
+          })
+          return
+        }
+      }
+      
+      // Fallback for desktop / unsupported browsers
+      doc.save(filename)
+    } catch (err) {
+      console.error('Error generating PDF:', err)
+      alert('Could not generate PDF. Please try again.')
+    }
   }
 
   if (!isClient) return null
