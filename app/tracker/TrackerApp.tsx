@@ -123,6 +123,7 @@ export function TrackerApp() {
   const [pulse,     setPulse]     = useState('')
   const [notes,     setNotes]     = useState('')
   const [logTime,   setLogTime]   = useState('')
+  const [showReminderMenu, setShowReminderMenu] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
@@ -207,31 +208,18 @@ export function TrackerApp() {
     }
   }
 
-  const setReminder = () => {
-    // Generate an ICS file for a daily recurring event
-    const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Project Lantern//Tracker//EN
-BEGIN:VEVENT
-SUMMARY:Log Symptoms (Project Lantern)
-DESCRIPTION:Time to log your daily symptoms and blood pressure in the Project Lantern tracker.\\n\\nOpen tracker: https://project-lantern-teal.vercel.app/tracker
-RRULE:FREQ=DAILY
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Log Symptoms (Project Lantern)
-TRIGGER:-PT0M
-END:VALARM
-END:VEVENT
-END:VCALENDAR`
+  const handleAppleReminder = () => {
+    const icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Project Lantern//Tracker//EN\nBEGIN:VEVENT\nSUMMARY:Log Symptoms (Project Lantern)\nDESCRIPTION:Time to log your daily symptoms and blood pressure in the Project Lantern tracker.\\n\\nOpen tracker: https://project-lantern-teal.vercel.app/tracker\nRRULE:FREQ=DAILY\nBEGIN:VALARM\nACTION:DISPLAY\nDESCRIPTION:Log Symptoms (Project Lantern)\nTRIGGER:-PT0M\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR`
+    
+    // Direct navigation to data URI forces iOS Safari to open Calendar app
+    window.location.assign('data:text/calendar;charset=utf8,' + encodeURIComponent(icsContent))
+    setShowReminderMenu(false)
+  }
 
-    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
-    link.href = url
-    link.setAttribute('download', 'lantern-daily-reminder.ics')
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+  const handleGoogleReminder = () => {
+    const url = 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Log+Symptoms+(Project+Lantern)&details=Time+to+log+your+daily+symptoms+in+the+Project+Lantern+tracker.%0A%0AOpen+tracker:+https://project-lantern-teal.vercel.app/tracker&recur=RRULE:FREQ=DAILY'
+    window.open(url, '_blank')
+    setShowReminderMenu(false)
   }
 
   if (!isClient) return null
@@ -278,9 +266,35 @@ END:VCALENDAR`
             </div>
             
             <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
-              <button onClick={setReminder} className="btn" style={{ background: '#dbdbd2', color: '#141414', border: '1px solid rgba(0,0,0,0.1)', height: '40px', padding: '0 20px', fontSize: '14px' }}>
-                Set Reminder
-              </button>
+              <div style={{ position: 'relative' }}>
+                <button onClick={() => setShowReminderMenu(!showReminderMenu)} className="btn" style={{ background: '#dbdbd2', color: '#141414', border: '1px solid rgba(0,0,0,0.1)', height: '40px', padding: '0 20px', fontSize: '14px' }}>
+                  Set Reminder
+                </button>
+                {showReminderMenu && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '100%',
+                    right: 0,
+                    marginTop: '8px',
+                    background: '#ffffff',
+                    border: '1px solid rgba(0,0,0,0.1)',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    padding: '8px',
+                    zIndex: 50,
+                    minWidth: '160px',
+                  }}>
+                    <button onClick={handleAppleReminder} style={{ padding: '8px 12px', textAlign: 'left', background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#292929', borderRadius: '4px' }} onMouseOver={e => e.currentTarget.style.background = '#f5f5f5'} onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
+                      Apple Calendar
+                    </button>
+                    <button onClick={handleGoogleReminder} style={{ padding: '8px 12px', textAlign: 'left', background: 'transparent', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#292929', borderRadius: '4px' }} onMouseOver={e => e.currentTarget.style.background = '#f5f5f5'} onMouseOut={e => e.currentTarget.style.background = 'transparent'}>
+                      Google Calendar
+                    </button>
+                  </div>
+                )}
+              </div>
               {view === 'history' && logs.length > 0 && (
                 <button onClick={exportPDF} className="btn btn-primary" style={{ height: '40px', padding: '0 20px', fontSize: '14px' }}>
                   Export PDF

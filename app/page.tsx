@@ -283,7 +283,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Map */}
-          <motion.div variants={FV} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '48px' }}>
+          <motion.div variants={FV} className="flex items-center justify-center p-0 md:p-12 w-full min-h-[300px] md:min-h-0">
             <IndiaMap />
           </motion.div>
         </motion.div>
