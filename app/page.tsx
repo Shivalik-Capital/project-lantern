@@ -336,8 +336,7 @@ export default function HomePage() {
       {/* ─── 7. TRACKER MOCKUP — 2-col, HTML mockup ─────────────── */}
       <section style={{ background: '#141414', padding: '96px 0' }}>
         <motion.div
-          className="container-layout"
-          style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', alignItems: 'center' }}
+          className="container-layout flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center"
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={SV}
         >
           {/* Text */}
@@ -399,7 +398,7 @@ export default function HomePage() {
                 { label: 'Agitation', rating: 1 },
                 { label: 'Appetite', rating: 4 },
               ].map(row => (
-                <div key={row.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+                <div key={row.label} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4">
                   <span style={{ fontSize: '15px', color: '#6f6f6e' }}>{row.label}</span>
                   <div style={{ display: 'flex', gap: '6px' }}>
                     {[1,2,3,4,5].map(n => (
