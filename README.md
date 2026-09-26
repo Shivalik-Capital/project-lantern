@@ -1,105 +1,100 @@
-# Project Lantern
+# 🏮 Project Lantern
 
-Project Lantern is a comprehensive, culturally-contextualized educational platform and data dashboard for Alzheimer's disease and dementia care in India.
+**Project Lantern** is a comprehensive, culturally-contextualized educational platform and data dashboard for Alzheimer's disease and dementia care in India. 
 
-## Roadmap
+The available information on dementia is almost entirely written for Western families—assuming access to GPs, structured care homes, and healthcare systems that most Indian families will never encounter. Project Lantern bridges this gap by providing tailored, localized, and practical information, alongside offline-first tracking tools for caregivers.
 
-V1 — The Educational Foundation ✅ COMPLETED
+---
 
-Goal: Build the core content repository and resource directory. We are not building dashboards or complex features yet. This is about establishing trust and authority.
+## ✨ Features
 
-Deliverables:
+- **Culturally-Contextualized Guides:** Articles and guides specifically written for the Indian healthcare context.
+- **Dementia Data Map:** Interactive choropleth map visualizing estimated dementia prevalence across Indian states.
+- **Offline-First Symptom Tracker:** A daily symptom tracker (Memory, Sleep, Agitation, Appetite, Blood Pressure) designed for caregivers. It stores data locally on the device via IndexedDB (Dexie) and never sends personal health data to a server.
+- **PDF Export for Doctors:** Generates structured PDF reports of symptom history to hand to a neurologist or doctor during a 5-minute consultation.
+- **PWA Ready:** Installable as a Progressive Web App (PWA) on iOS and Android for offline access.
+- **Daily Reminders:** Integrated Google and Apple Calendar recurring reminders to help caregivers remember to log symptoms.
 
-Core website structure (Home, Understand, Caregiving, Glossary, Find Help, About)
-10-15 high-quality medical articles explaining Alzheimer’s and Dementia in simple English (written by us, reviewed by doctors)
-A simple glossary of terms
-A directory of NGOs, memory clinics, and helplines across major Indian cities (structured by state/city)
-Clear, prominent disclaimer on every page: "Project Lantern provides educational information, not medical advice. Content reviewed by [Doctor Name], [Hospital]."
-Mobile-first, accessible design (WCAG 2.1 AA target)
-Basic analytics (privacy-respecting, e.g., Plausible Analytics)
+---
 
-Technology: Next.js + MDX + Tailwind + Vercel. No backend database yet. Resource directory can be a JSON file in the repo at this stage.
+## 🛠 Tech Stack
 
-Not in V1: Dashboards, AI, multilingual content, user accounts.
+- **Framework:** [Next.js](https://nextjs.org/) 16 (App Router)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Content:** [Velite](https://velite.js.org/) for type-safe MDX processing
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Local Storage:** [Dexie.js](https://dexie.org/) (IndexedDB wrapper) for the offline tracker
+- **PDF Generation:** `jspdf` & `jspdf-autotable`
+- **Design System:** Custom "Gleap" theme (Warm cream-paper workspace with graphite and lime pulse accents)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-Success metric: 500 unique monthly visitors from India within 3 months of launch; zero factual errors in published content (enforced by review process).
+---
 
-V2 — Data Dashboard ✅ COMPLETED
+## 🚀 Getting Started
 
-Goal: Add interactive public-health dashboards that make India-specific dementia data accessible and visual.
+### Prerequisites
+- Node.js 18+
+- npm or pnpm
 
-Deliverables:
+### Installation
 
-India state-level choropleth map: estimated dementia prevalence (from LASI/LASI-DAD)
-National trend chart: dementia burden 1990–2021 (GBD/IHME data)
-Risk factor visualization: contribution of diabetes, smoking, hypertension, low education to dementia risk
-Healthcare access map: geriatric specialist density by state (from NHM data)
-"India in Global Context" chart: India vs comparable countries (using OWID/IHME data)
-Data sourcing transparency panel on every chart ("This data comes from IHME GBD 2023, downloaded [date]")
-FastAPI backend deployed on Render
-PostgreSQL on Supabase with pre-aggregated data tables
-Dashboard pages are server-side rendered (good SEO and performance)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Shivalik-Capital/project-lantern.git
+   cd project-lantern
+   ```
 
-Data sources activated in V2: IHME GBD CSVs, Census 2011 (elderly population), NHM infrastructure data, OWID charts (embedded with attribution)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Not in V2: AI features, Hindi content, user accounts.
+3. Build the content (Velite) and start the development server:
+   ```bash
+   npm run dev
+   ```
+   *Note: `npm run dev` automatically runs `velite build` to compile the MDX content before starting Next.js.*
 
-Success metric: Dashboard pages average >2 minutes time-on-page; charts cited by at least one researcher or journalist.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-V3 — AI Accessibility & Hindi Content (Months 10–15)
+---
 
-Goal: Add carefully bounded AI features and begin multilingual content.
+## 📁 Project Structure
 
-Deliverables:
+- `/app` - Next.js App Router pages (Home, Tracker, Articles, Maps).
+- `/components` - Reusable React components (UI elements, layout, tracker inputs).
+- `/content` - MDX files for articles and guides, parsed by Velite.
+- `/public` - Static assets, PWA manifest, favicons, and the static `.ics` reminder file.
+- `velite.config.ts` - Schema definition for the MDX content structure.
 
-"Ask the Guide" content assistant (Feature A — RAG-based, Claude-powered)
-Plain-language term explainer (Feature B)
-Caregiver Stage Navigator tool (Feature D — primarily rule-based)
-Hindi translation of top 5 most-visited articles (human-translated, not AI-generated)
-AI-generated multilingual summaries for remaining articles (clearly labeled as AI-generated)
-Caregiver stories section: real first-person accounts submitted and reviewed
-Crisis/emergency redirect: if AI receives concerning queries, immediate redirect to helplines
+---
 
-Not in V3: User accounts, community features, native app.
+## 🗺 Roadmap
 
-Success metric: AI assistant used on >20% of sessions; Hindi content accounts for >15% of traffic; zero complaints about AI overstepping into medical advice.
+**V1 & V2 — The Educational Foundation & Data Dashboard** ✅ **COMPLETED**
+- Core website structure and educational content repository.
+- India state-level choropleth map for dementia prevalence.
+- Offline-first daily caregiver tracker with PDF export capabilities.
+- Progressive Web App (PWA) installation.
 
-V4 — Community & Verified Resources (Months 16–24)
+**V3 — AI Accessibility & Hindi Content** *(Upcoming)*
+- "Ask the Guide" content assistant (RAG-based AI).
+- Plain-language term explainer.
+- Hindi translation of top most-visited articles.
+- Caregiver stories section.
 
-Goal: Build sustainable engagement and a community layer.
+**V4 — Community & Verified Resources** *(Future)*
+- Caregiver Forum: moderated peer support community.
+- Facility directory (memory clinics, day care centers, support groups).
+- Expanded translations into Tamil and Telugu.
+- DPDP Act 2023 compliance enhancements.
 
-Deliverables:
+**V5 — Depth, Scale & Partnerships** *(Future)*
+- Complete translation into 6 Indian languages.
+- Partnership with ARDSI for data sharing and content collaboration.
+- Research data portal for Indian researchers.
+- Video library (expert interviews, caregiving demonstrations).
 
-User accounts (optional; email/OTP login for Indian users)
-Caregiver Forum: moderated peer support community
-Facility directory with community-submitted and verified entries (memory clinics, day care centers, support groups)
-Resource Finder tool (Feature E — hybrid AI + structured data)
-Human-verified translations of top 20 articles into Hindi, Tamil, Telugu
-Bookmark and save features (requires account)
-Weekly/monthly caregiver email newsletter
-DPDP Act 2023 compliance: privacy policy, data minimization, consent flows, right to erasure
+---
 
-Technical additions: Supabase Auth, moderation workflow, email system (Resend or Postmark)
-
-Not in V4: Native mobile app.
-
-Success metric: 50+ verified facility listings; active community forum with >100 members; 5,000+ monthly visitors.
-
-V5 — Depth, Scale & Partnerships (Year 2–3)
-
-Goal: Establish the platform as the authoritative, sustainable, India-specific Alzheimer's educational resource.
-
-Deliverables:
-
-Progressive Web App (PWA) for offline access (critical for areas with poor connectivity)
-Content in 6 Indian languages with human-translated, professionally reviewed articles
-Partnership with ARDSI for data sharing and content collaboration
-Research data portal: aggregate, de-identified datasets curated from public sources for Indian researchers
-Caregiver burden tracking (optional, user-initiated, privacy-preserving — stored locally on device)
-Video library: expert interviews, caregiving demonstrations
-Annual India Dementia Data Report (PDF + interactive web version)
-Explore Ayushman Bharat API integration for coverage information
-
-Governance: If the platform reaches significant scale, explore formal nonprofit registration (Section 8/12A under Indian Income Tax Act) or FCRA registration if international funding is sought.
-
-Success metric: 25,000+ monthly visitors; referenced by MoHFW or NIMHANS publications; sustainable funding (grants, CSR donations).
+*Disclaimer: Project Lantern provides educational information, not medical advice. Content is for informational purposes only.*
